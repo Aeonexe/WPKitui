@@ -1,0 +1,12 @@
+.wk-section {
+  background-color: dodgerblue;
+  color: white;
+}
+
+[class^="wk-col-"] {
+  background-color: cyan;
+  border: 1px solid black;
+  color: black;
+}
+
+/*# sourceMappingURL=custom.css.map */

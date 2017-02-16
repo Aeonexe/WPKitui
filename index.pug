@@ -1,0 +1,49 @@
+doctype html
+html(srvr="Alumin")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title WPKit UI
+		link(rel="stylesheet" href="css/style.css")
+		link(rel="stylesheet" href="css/custom.css")
+		link(rel="stylesheet" href="css/template.css")
+		script(src="js/wpkitui.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
+		link(rel="stylesheet" href="assets/prismjs/prism.css")
+		script(src="assets/prismjs/prism.js") 
+	body
+		#wrapper
+			
+			section.wk-section.wk-section-first.wk-block-dark.wk-contrast
+				.wk-block-padding .wk-section .wk-section-first / .wk-block-padding 
+			
+			section.wk-section.wk-section-wrapp.wk-block-dark.wk-contrast-medium 
+				.wk-block-padding .wk-section.wk-section-wrapp / .wk-block-padding  
+			
+			section.wk-section.wk-section-wrapp
+				.wk-block-padding .wk-section 
+
+				h3 WK-COLS Se apilarán en todos los dispositivos móviles
+				.wk-cols
+					- for ( n=1; n<13; n++ )
+						.wk-col-1 col #{n}
+
+				h3 WK-T-COLS Se apilarán solo en móvil xs
+				.wk-t-cols
+					- for ( n=1; n<13; n++ )
+						.wk-col-1 col #{n}
+
+				h3 WK-M-COLS Núnca se apliarán
+				.wk-m-cols
+					- for ( n=1; n<13; n++ )
+						.wk-col-1 col #{n}
+
+
+
+			section.wk-section.wk-section-last 
+				.wk-block-padding .wk-section.wk-section-last / .wk-block-padding 
+
+
+
+
+	

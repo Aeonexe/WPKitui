@@ -1,0 +1,118 @@
+/* Ie 9, safari 5 .no-flexbox */
+
+$text-color-primary: #000;
+$text-color-contrast: #fff;
+$text-color-contrast-medium: #aaa;
+
+$section-max-width: 800px;
+
+$width-mobile: 770px;
+$width-mobile-xs: 414px;
+
+//
+
+* 
+	box-sizing: border-box
+
+body 
+	margin: 0
+	padding: 0
+	font-family: sans-serif
+	font-size: 13px
+
+html,
+body,
+#wrapper,
+.wk-section
+	width: 100%;
+
+//////////////////// .wk-section
+
+.wk-section-wrapp
+	width: 100%
+	max-width: $section-max-width
+	margin:
+		left: auto
+		right: auto
+
+//////////////////// .wk-block
+
+.wk-block-padding
+	padding:
+		left: 10px
+		right: 10px
+		top: 10px
+		bottom: 10px
+
+//////////////////// .wk-contrast
+.wk-contrast
+	color: $text-color-contrast
+
+.wk-contrast-medium
+	color: $text-color-contrast-medium
+
+//////////////////// .wk-section-color
+.wk-block-dark 
+	background-color: #000 !important
+
+
+//////////////////// .wk-cols
+
+[class^="wk"] ~ [class$="cols"]
+	width: 100%
+	background-color: red
+	display: flex
+	&:after
+		content: ""
+		display: table
+		clear: both	
+
+@supports (display: -webkit-flex) or ( display: -moz-flex ) or ( display: flex )
+	@media ( max-width: $width-mobile )
+		.wk-cols
+			flex-direction: column
+
+	@media ( max-width: $width-mobile-xs )
+		.wk-t-cols
+			flex-direction: column
+
+[class^="wk-col-"]
+	flex-grow: 1
+	flex-shrink: 1
+
+
+/*========== No Flexbox =========*/
+.no-flexbox [class^="wk-col-"]
+	width: 8.333333%
+	width: calc(100% / 12 - .01px)
+	float: left
+	&:after
+		content: ""
+		display: table
+		clear: both	
+
+.no-flexbox .wk-cols > [class^="wk-col-"]
+		@media ( max-width: $width-mobile )
+			width: 100%
+			float: none
+
+.no-flexbox .wk-t-cols > [class^="wk-col-"]
+		@media ( max-width: $width-mobile-xs )
+			width: 100%
+			float: none
+
+
+
+
+
+
+
+
+
+////////////////////
+	// $wk-col-slug: wk-col; 
+
+	//@for $i from 1 through 12
+	//	.wk-col-#{$i}
+	//		width: 300px + $i
+
