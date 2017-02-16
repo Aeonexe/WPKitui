@@ -9,61 +9,448 @@ $section-max-width: 800px;
 $width-mobile: 770px;
 $width-mobile-xs: 414px;
 
+$width-mobile-plus: 771px;
+$width-mobile-xs-plus: 415px;
+
 //
 
 * 
 	box-sizing: border-box
 
 
-
-
-
-
-
 //////////////////// .wk-cols
 
-[class^="wk"] ~ [class$="cols"]
+[class^="wk-cols"]
 	width: 100%
-	background-color: red
 	display: flex
-	&:after
-		content: ""
-		display: table
-		clear: both	
+	
+	[class^="wk-col-"]
+		flex-grow: 1
+		flex-shrink: 1
 
-@supports (display: -webkit-flex) or ( display: -moz-flex ) or ( display: flex )
-	@media ( max-width: $width-mobile )
-		.wk-cols
-			flex-direction: column
+@media ( max-width: $width-mobile )
+	.wk-cols,
+	.wk-cols-14,
+	.wk-cols-16
+		flex-direction: column
 
-	@media ( max-width: $width-mobile-xs )
-		.wk-t-cols
-			flex-direction: column
+@media ( max-width: $width-mobile-xs )
+	.wk-cols-t,
+	.wk-cols-14-t,
+	.wk-cols-16-t,
+	.wk-cols-te,
+	.wk-cols-14-te,
+	.wk-cols-16-te
+		flex-direction: column
 
-[class^="wk-col-"]
-	flex-grow: 1
-	flex-shrink: 1
+@media ( min-width: $width-mobile-plus )
+	.wk-cols
+		.wk-col-1
+			width: 100% / 12 * 1
+		.wk-col-2
+			width: 100% / 12 * 2
+		.wk-col-3 
+			width: 100% / 12 * 3
+		.wk-col-4
+			width: 100% / 12 * 4
+		.wk-col-5
+			width: 100% / 12 * 5
+		.wk-col-6
+			width: 100% / 12 * 6
+		.wk-col-7
+			width: 100% / 12 * 7
+		.wk-col-8
+			width: 100% / 12 * 8
+		.wk-col-9
+			width: 100% / 12 * 9
+		.wk-col-10
+			width: 100% / 12 * 10
+		.wk-col-11
+			width: 100% / 12 * 11
+		.wk-col-12
+			width: 100%
+
+	.wk-cols-14
+		.wk-col-1
+			width: 100% / 14 * 1
+		.wk-col-2
+			width: 100% / 14 * 2
+		.wk-col-3 
+			width: 100% / 14 * 3
+		.wk-col-4
+			width: 100% / 14 * 4
+		.wk-col-5
+			width: 100% / 14 * 5
+		.wk-col-6
+			width: 100% / 14 * 6
+		.wk-col-7
+			width: 100% / 14 * 7
+		.wk-col-8
+			width: 100% / 14 * 8
+		.wk-col-9
+			width: 100% / 14 * 9
+		.wk-col-10
+			width: 100% / 14 * 10
+		.wk-col-11
+			width: 100% / 14 * 11
+		.wk-col-12
+			width: 100% / 14 * 12
+		.wk-col-13
+			width: 100% / 14 * 13
+		.wk-col-14
+			width: 100%
+
+	.wk-cols-16
+		.wk-col-1
+			width: 100% / 16 * 1
+		.wk-col-2
+			width: 100% / 16 * 2
+		.wk-col-3 
+			width: 100% / 16 * 3
+		.wk-col-4
+			width: 100% / 16 * 4
+		.wk-col-5
+			width: 100% / 16 * 5
+		.wk-col-6
+			width: 100% / 16 * 6
+		.wk-col-7
+			width: 100% / 16 * 7
+		.wk-col-8
+			width: 100% / 16 * 8
+		.wk-col-9
+			width: 100% / 16 * 9
+		.wk-col-10
+			width: 100% / 16 * 10
+		.wk-col-11
+			width: 100% / 16 * 11
+		.wk-col-12
+			width: 100% / 16 * 12
+		.wk-col-13
+			width: 100% / 16 * 13
+		.wk-col-14
+			width: 100% / 16 * 14
+		.wk-col-15
+			width: 100% / 16 * 15
+		.wk-col-16
+			width: 100% / 16 * 16
+
+@media ( min-width: $width-mobile-xs-plus )
+	
+	.wk-cols-t,
+	.wk-cols-te
+		.wk-col-1
+			width: 100% / 12 * 1
+		.wk-col-2
+			width: 100% / 12 * 2
+		.wk-col-3 
+			width: 100% / 12 * 3
+		.wk-col-4
+			width: 100% / 12 * 4
+		.wk-col-5
+			width: 100% / 12 * 5
+		.wk-col-6
+			width: 100% / 12 * 6
+		.wk-col-7
+			width: 100% / 12 * 7
+		.wk-col-8
+			width: 100% / 12 * 8
+		.wk-col-9
+			width: 100% / 12 * 9
+		.wk-col-10
+			width: 100% / 12 * 10
+		.wk-col-11
+			width: 100% / 12 * 11
+		.wk-col-12
+			width: 100%
+
+	.wk-cols-14-t,
+	.wk-cols-14-te
+		.wk-col-1
+			width: 100% / 14 * 1
+		.wk-col-2
+			width: 100% / 14 * 2
+		.wk-col-3 
+			width: 100% / 14 * 3
+		.wk-col-4
+			width: 100% / 14 * 4
+		.wk-col-5
+			width: 100% / 14 * 5
+		.wk-col-6
+			width: 100% / 14 * 6
+		.wk-col-7
+			width: 100% / 14 * 7
+		.wk-col-8
+			width: 100% / 14 * 8
+		.wk-col-9
+			width: 100% / 14 * 9
+		.wk-col-10
+			width: 100% / 14 * 10
+		.wk-col-11
+			width: 100% / 14 * 11
+		.wk-col-12
+			width: 100% / 14 * 12
+		.wk-col-13
+			width: 100% / 14 * 13
+		.wk-col-14
+			width: 100%
+
+	.wk-cols-16-t,
+	.wk-cols-16-te
+		.wk-col-1
+			width: 100% / 16 * 1
+		.wk-col-2
+			width: 100% / 16 * 2
+		.wk-col-3 
+			width: 100% / 16 * 3
+		.wk-col-4
+			width: 100% / 16 * 4
+		.wk-col-5
+			width: 100% / 16 * 5
+		.wk-col-6
+			width: 100% / 16 * 6
+		.wk-col-7
+			width: 100% / 16 * 7
+		.wk-col-8
+			width: 100% / 16 * 8
+		.wk-col-9
+			width: 100% / 16 * 9
+		.wk-col-10
+			width: 100% / 16 * 10
+		.wk-col-11
+			width: 100% / 16 * 11
+		.wk-col-12
+			width: 100% / 16 * 12
+		.wk-col-13
+			width: 100% / 16 * 13
+		.wk-col-14
+			width: 100% / 16 * 14
+		.wk-col-15
+			width: 100% / 16 * 15
+		.wk-col-16
+			width: 100% / 16 * 16
+
+.wk-cols-m
+	.wk-col-1
+		width: 100% / 12 * 1
+	.wk-col-2
+		width: 100% / 12 * 2
+	.wk-col-3 
+		width: 100% / 12 * 3
+	.wk-col-4
+		width: 100% / 12 * 4
+	.wk-col-5
+		width: 100% / 12 * 5
+	.wk-col-6
+		width: 100% / 12 * 6
+	.wk-col-7
+		width: 100% / 12 * 7
+	.wk-col-8
+		width: 100% / 12 * 8
+	.wk-col-9
+		width: 100% / 12 * 9
+	.wk-col-10
+		width: 100% / 12 * 10
+	.wk-col-11
+		width: 100% / 12 * 11
+	.wk-col-12
+		width: 100%
+
+.wk-cols-14-m
+	.wk-col-1
+		width: 100% / 14 * 1
+	.wk-col-2
+		width: 100% / 14 * 2
+	.wk-col-3 
+		width: 100% / 14 * 3
+	.wk-col-4
+		width: 100% / 14 * 4
+	.wk-col-5
+		width: 100% / 14 * 5
+	.wk-col-6
+		width: 100% / 14 * 6
+	.wk-col-7
+		width: 100% / 14 * 7
+	.wk-col-8
+		width: 100% / 14 * 8
+	.wk-col-9
+		width: 100% / 14 * 9
+	.wk-col-10
+		width: 100% / 14 * 10
+	.wk-col-11
+		width: 100% / 14 * 11
+	.wk-col-12
+		width: 100% / 14 * 12
+	.wk-col-13
+		width: 100% / 14 * 13
+	.wk-col-14
+		width: 100%
+
+.wk-cols-16-m
+	.wk-col-1
+		width: 100% / 16 * 1
+	.wk-col-2
+		width: 100% / 16 * 2
+	.wk-col-3 
+		width: 100% / 16 * 3
+	.wk-col-4
+		width: 100% / 16 * 4
+	.wk-col-5
+		width: 100% / 16 * 5
+	.wk-col-6
+		width: 100% / 16 * 6
+	.wk-col-7
+		width: 100% / 16 * 7
+	.wk-col-8
+		width: 100% / 16 * 8
+	.wk-col-9
+		width: 100% / 16 * 9
+	.wk-col-10
+		width: 100% / 16 * 10
+	.wk-col-11
+		width: 100% / 16 * 11
+	.wk-col-12
+		width: 100% / 16 * 12
+	.wk-col-13
+		width: 100% / 16 * 13
+	.wk-col-14
+		width: 100% / 16 * 14
+	.wk-col-15
+		width: 100% / 16 * 15
+	.wk-col-16
+		width: 100% / 16 * 16
+
+@media ( min-width: $width-mobile-xs-plus )
+	.wk-cols-me
+		.wk-col-1
+			width: 100% / 12 * 1
+		.wk-col-2
+			width: 100% / 12 * 2
+		.wk-col-3 
+			width: 100% / 12 * 3
+		.wk-col-4
+			width: 100% / 12 * 4
+		.wk-col-5
+			width: 100% / 12 * 5
+		.wk-col-6
+			width: 100% / 12 * 6
+		.wk-col-7
+			width: 100% / 12 * 7
+		.wk-col-8
+			width: 100% / 12 * 8
+		.wk-col-9
+			width: 100% / 12 * 9
+		.wk-col-10
+			width: 100% / 12 * 10
+		.wk-col-11
+			width: 100% / 12 * 11
+		.wk-col-12
+			width: 100%
+
+	.wk-cols-14-me
+		.wk-col-1
+			width: 100% / 14 * 1
+		.wk-col-2
+			width: 100% / 14 * 2
+		.wk-col-3 
+			width: 100% / 14 * 3
+		.wk-col-4
+			width: 100% / 14 * 4
+		.wk-col-5
+			width: 100% / 14 * 5
+		.wk-col-6
+			width: 100% / 14 * 6
+		.wk-col-7
+			width: 100% / 14 * 7
+		.wk-col-8
+			width: 100% / 14 * 8
+		.wk-col-9
+			width: 100% / 14 * 9
+		.wk-col-10
+			width: 100% / 14 * 10
+		.wk-col-11
+			width: 100% / 14 * 11
+		.wk-col-12
+			width: 100% / 14 * 12
+		.wk-col-13
+			width: 100% / 14 * 13
+		.wk-col-14
+			width: 100%
+
+	.wk-cols-16-me
+		.wk-col-1
+			width: 100% / 16 * 1
+		.wk-col-2
+			width: 100% / 16 * 2
+		.wk-col-3 
+			width: 100% / 16 * 3
+		.wk-col-4
+			width: 100% / 16 * 4
+		.wk-col-5
+			width: 100% / 16 * 5
+		.wk-col-6
+			width: 100% / 16 * 6
+		.wk-col-7
+			width: 100% / 16 * 7
+		.wk-col-8
+			width: 100% / 16 * 8
+		.wk-col-9
+			width: 100% / 16 * 9
+		.wk-col-10
+			width: 100% / 16 * 10
+		.wk-col-11
+			width: 100% / 16 * 11
+		.wk-col-12
+			width: 100% / 16 * 12
+		.wk-col-13
+			width: 100% / 16 * 13
+		.wk-col-14
+			width: 100% / 16 * 14
+		.wk-col-15
+			width: 100% / 16 * 15
+		.wk-col-16
+			width: 100% / 16 * 16
+
+@media ( min-width: $width-mobile-xs-plus ) and ( max-width: $width-mobile-plus )
+	.wk-cols-te,
+	.wk-cols-14-te,
+	.wk-cols-16-te
+		> [class^="wk-col-"]
+			width: 50%
+
+@media ( max-width: $width-mobile-xs )
+
+	.wk-cols-me 
+		> [class^="wk-col-"]
+			width: 50%
 
 
 /*========== No Flexbox =========*/
-.no-flexbox [class^="wk-col-"]
-	width: 8.333333%
-	width: calc(100% / 12 - .01px)
-	float: left
-	&:after
-		content: ""
-		display: table
-		clear: both	
 
-.no-flexbox .wk-cols > [class^="wk-col-"]
-		@media ( max-width: $width-mobile )
-			width: 100%
-			float: none
 
-.no-flexbox .wk-t-cols > [class^="wk-col-"]
-		@media ( max-width: $width-mobile-xs )
-			width: 100%
-			float: none
+// .no-flexbox 
+
+// 	[class^="wk-cols"]
+// 		&:after
+// 			content: ""
+// 			display: table
+// 			clear: both
+
+// 		> [class^="wk-col-"]
+// 			width: 8.333333%
+// 			width: calc(100% / 12 - .01px)
+// 			float: left
+
+// 	.wk-cols 
+// 		> [class^="wk-col-"]
+// 			@media ( max-width: $width-mobile )
+// 				width: 100% 
+// 				float: none	
+
+// 	.wk-cols-t
+// 		> [class^="wk-col-"]
+// 			@media ( max-width: $width-mobile-xs )
+// 				width: 100%
+// 				float: none
 
 
 
