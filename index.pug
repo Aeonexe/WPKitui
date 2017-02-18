@@ -1,12 +1,13 @@
 doctype html
-html(srvr="Alumin")
+html.no-flexbox(srvr="Alumin")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		title WPKit UI
-		link(rel="stylesheet" href="css/style.css")
+		link(rel="stylesheet" href="css/wpkitui.css")
 		link(rel="stylesheet" href="css/custom.css")
 		link(rel="stylesheet" href="css/template.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
 		script(src="js/wpkitui.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
 		link(rel="stylesheet" href="assets/prismjs/prism.css")
@@ -16,12 +17,12 @@ html(srvr="Alumin")
 
 			header
 				section.wk-section-width-wrapp
-					.wk-cols
+					.wk-cols-m
 						.wk-col-6
 							img(width="32" src="img/favicon.png")
 						.wk-col-6
 							nav
-								ul.menu
+								ul.wk-menu
 									li Item 1
 									li Item 2
 
@@ -41,38 +42,44 @@ html(srvr="Alumin")
 			section.wk-section.wk-section-wrapp
 				.wk-block-padding .wk-section 
 
+				h3 Equal js
+				.wk-cols
+					- for ( n=1; n<13; n++ )
+						.wk-col col #{n}
+
 				h3 WK-COLS Se apilarán en todos los dispositivos móviles
 				.wk-cols
 					- for ( n=1; n<13; n++ )
 						.wk-col-1 col #{n}
 				h3 WK Cols 8
-				.wk-cols-8t
-					.wk-col-1 1 t
-					.wk-col-7 7 t
-
-				.wk-cols-8te
-					.wk-col-2 2 te
-					.wk-col-6 6 te
-
-				.wk-cols-8m
-					.wk-col-3 3 m
-					.wk-col-5 5 m
-
-				.wk-cols-8me
-					.wk-col-4 4 me
-					.wk-col-4 4 me
-
 				.wk-cols-8
-					.wk-col-5 5
-					.wk-col-3 3
+					.wk-cols-t
+						.wk-col-1 1 t
+						.wk-col-7 7 t
 
-				.wk-cols-8
-					.wk-col-6 6
-					.wk-col-2 2
+					.wk-cols-te
+						.wk-col-2 2 te
+						.wk-col-6 6 te
 
-				.wk-cols-8
-					.wk-col-7 7
-					.wk-col-1 1
+					.wk-cols-m
+						.wk-col-3 3 m
+						.wk-col-5 5 m
+
+					.wk-cols-me
+						.wk-col-4 4 me
+						.wk-col-4 4 me
+
+					.wk-cols
+						.wk-col-5 5
+						.wk-col-3 3
+
+					.wk-cols
+						.wk-col-6 6
+						.wk-col-2 2
+
+					.wk-cols
+						.wk-col-7 7
+						.wk-col-1 1
 
 
 				h3 WK Cols 12
@@ -130,118 +137,242 @@ html(srvr="Alumin")
 					.wk-col-2 2a
 
 				h3 WK Cols 14
-				.wk-cols-14t
-					.wk-col-1 1 t
-					.wk-col-13 13 t
-
-				.wk-cols-14te
-					.wk-col-2 2 te
-					.wk-col-12 12 te
-
-				.wk-cols-14m
-					.wk-col-3 3 m
-					.wk-col-11 11 m
-
-				.wk-cols-14me
-					.wk-col-4 4 me
-					.wk-col-10 10 me
-
 				.wk-cols-14
-					.wk-col-5 5
-					.wk-col-9 9
+					.wk-cols-t
+						.wk-col-1 1 t
+						.wk-col-13 13 t
 
-				.wk-cols-14
-					.wk-col-6 6
-					.wk-col-8 8
+					.wk-cols-te
+						.wk-col-2 2 te
+						.wk-col-12 12 te
 
-				.wk-cols-14
-					.wk-col-7 7
-					.wk-col-7 7
+					.wk-cols-m
+						.wk-col-3 3 m
+						.wk-col-11 11 m
 
-				.wk-cols-14
-					.wk-col-8 8
-					.wk-col-6 6
+					.wk-cols-me
+						.wk-col-4 4 me
+						.wk-col-10 10 me
 
-				.wk-cols-14
-					.wk-col-9 9
-					.wk-col-5 5
+					.wk-cols
+						.wk-col-5 5
+						.wk-col-9 9
 
-				.wk-cols-14
-					.wk-col-10 10
-					.wk-col-4 4
+					.wk-cols
+						.wk-col-6 6
+						.wk-col-8 8
 
-				.wk-cols-14
-					.wk-col-11 11
-					.wk-col-3 3
+					.wk-cols
+						.wk-col-7 7
+						.wk-col-7 7
 
-				.wk-cols-14
-					.wk-col-12 12
-					.wk-col-2 2
+					.wk-cols
+						.wk-col-8 8
+						.wk-col-6 6
 
-				.wk-cols-14
-					.wk-col-13 13
-					.wk-col-1 1
+					.wk-cols
+						.wk-col-9 9
+						.wk-col-5 5
+
+					.wk-cols
+						.wk-col-10 10
+						.wk-col-4 4
+
+					.wk-cols
+						.wk-col-11 11
+						.wk-col-3 3
+
+					.wk-cols
+						.wk-col-12 12
+						.wk-col-2 2
+
+					.wk-cols
+						.wk-col-13 13
+						.wk-col-1 1
 
 				h3 WK Cols 16
-				.wk-cols-16t
-					.wk-col-1 1 t
-					.wk-col-15 15 t
-
-				.wk-cols-16te
-					.wk-col-2 2 te
-					.wk-col-14 14 te
-
-				.wk-cols-16m
-					.wk-col-3 3 m
-					.wk-col-13 13 m
-
-				.wk-cols-16me
-					.wk-col-4 4 me
-					.wk-col-12 12 me
-
 				.wk-cols-16
-					.wk-col-5 5
-					.wk-col-11 11
+					.wk-cols-t
+						.wk-col-1 1 t
+						.wk-col-15 15 t
 
-				.wk-cols-16
-					.wk-col-6 6
-					.wk-col-10 10
+					.wk-cols-te
+						.wk-col-2 2 te
+						.wk-col-14 14 te
 
-				.wk-cols-16
-					.wk-col-7 7
-					.wk-col-9 9
+					.wk-cols-m
+						.wk-col-3 3 m
+						.wk-col-13 13 m
 
-				.wk-cols-16
-					.wk-col-8 8
-					.wk-col-8 8
+					.wk-cols-me
+						.wk-col-4 4 me
+						.wk-col-12 12 me
 
-				.wk-cols-16
-					.wk-col-9 9
-					.wk-col-7 7
+					.wk-cols
+						.wk-col-5 5
+						.wk-col-11 11
 
-				.wk-cols-16
-					.wk-col-10 10
-					.wk-col-6 6
+					.wk-cols
+						.wk-col-6 6
+						.wk-col-10 10
 
-				.wk-cols-16
-					.wk-col-11 11
-					.wk-col-5 5
+					.wk-cols
+						.wk-col-7 7
+						.wk-col-9 9
 
-				.wk-cols-16
-					.wk-col-12 12
-					.wk-col-4 4
+					.wk-cols
+						.wk-col-8 8
+						.wk-col-8 8
 
-				.wk-cols-16
-					.wk-col-13 13
-					.wk-col-3 3
+					.wk-cols
+						.wk-col-9 9
+						.wk-col-7 7
 
-				.wk-cols-16
-					.wk-col-14 14
-					.wk-col-2 2
+					.wk-cols
+						.wk-col-10 10
+						.wk-col-6 6
 
-				.wk-cols-16
-					.wk-col-15 15
-					.wk-col-1 1
+					.wk-cols
+						.wk-col-11 11
+						.wk-col-5 5
+
+					.wk-cols
+						.wk-col-12 12
+						.wk-col-4 4
+
+					.wk-cols
+						.wk-col-13 13
+						.wk-col-3 3
+
+					.wk-cols
+						.wk-col-14 14
+						.wk-col-2 2
+
+					.wk-cols
+						.wk-col-15 15
+						.wk-col-1 1
+
+				h3 WK Col e 16
+				.wk-cols
+					.wk-col-2e 2e
+					.wk-col-2e 2e
+
+				.wk-cols
+					- for (n=0; n<3; n++)
+						.wk-col-3e 3e
+
+				.wk-cols
+					- for (n=0; n<4; n++)
+						.wk-col-4e 4e
+
+				.wk-cols
+					- for (n=0; n<5; n++)
+						.wk-col-5e 5e
+
+				.wk-cols
+					- for (n=0; n<6; n++)
+						.wk-col-6e 6e
+
+				.wk-cols
+					- for (n=0; n<7; n++)
+						.wk-col-7e 7e
+
+				.wk-cols
+					- for (n=0; n<8; n++)
+						.wk-col-8e 8e
+
+				.wk-cols
+					- for (n=0; n<9; n++)
+						.wk-col-9e 9e
+
+				.wk-cols
+					- for (n=0; n<10; n++)
+						.wk-col-10e 10e
+
+				.wk-cols
+					- for (n=0; n<11; n++)
+						.wk-col-11e 11e
+
+				.wk-cols
+					- for (n=0; n<12; n++)
+						.wk-col-12e 12e
+
+				.wk-cols
+					- for (n=0; n<13; n++)
+						.wk-col-13e 13e
+
+				.wk-cols
+					- for (n=0; n<14; n++)
+						.wk-col-14e 14e
+
+				.wk-cols
+					- for (n=0; n<15; n++)
+						.wk-col-15e 15e
+
+				.wk-cols
+					- for (n=0; n<16; n++)
+						.wk-col-16e 16e
+
+				h3 WK Col me 16
+				.wk-cols-me
+					.wk-col-2me 2e
+					.wk-col-2me 2e
+
+				.wk-cols-me
+					- for (n=0; n<3; n++)
+						.wk-col-3me 3e
+
+				.wk-cols-me
+					- for (n=0; n<4; n++)
+						.wk-col-4me 4e
+
+				.wk-cols-me
+					- for (n=0; n<5; n++)
+						.wk-col-5me 5e
+
+				.wk-cols-me
+					- for (n=0; n<6; n++)
+						.wk-col-6me 6e
+
+				.wk-cols-me
+					- for (n=0; n<7; n++)
+						.wk-col-7me 7e
+
+				.wk-cols-me
+					- for (n=0; n<8; n++)
+						.wk-col-8me 8e
+
+				.wk-cols-me
+					- for (n=0; n<9; n++)
+						.wk-col-9me 9e
+
+				.wk-cols-me
+					- for (n=0; n<10; n++)
+						.wk-col-10me 10e
+
+				.wk-cols-me
+					- for (n=0; n<11; n++)
+						.wk-col-11me 11e
+
+				.wk-cols-me
+					- for (n=0; n<12; n++)
+						.wk-col-12me 12e
+
+				.wk-cols-me
+					- for (n=0; n<13; n++)
+						.wk-col-13me 13e
+
+				.wk-cols-me
+					- for (n=0; n<14; n++)
+						.wk-col-14me 14e
+
+				.wk-cols-me
+					- for (n=0; n<15; n++)
+						.wk-col-15me 15e
+
+				.wk-cols-me
+					- for (n=0; n<16; n++)
+						.wk-col-16me 16e
 
 	
 
