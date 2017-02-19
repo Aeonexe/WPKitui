@@ -55,8 +55,10 @@ $width-mobile-xs-plus-1: 415px;
 
 [class^="wk-cols"]:not(.wk-cols-8):not(.wk-cols-14):not(.wk-cols-16)
 	width: 100%
+	display: flex
 	
-	[class~="wk-col"]
+	[class^="wk-col-"],
+	.wk-col
 		flex-grow: 1
 		flex-shrink: 1
 
@@ -64,6 +66,7 @@ $width-mobile-xs-plus-1: 415px;
 @media ( max-width: $width-mobile )
 	.wk-cols,
 	.wk-cols-8 .wk-cols,
+	.wk-cols-12 .wk-cols,
 	.wk-cols-14 .wk-cols,
 	.wk-cols-16 .wk-cols
 		flex-direction: column
@@ -74,11 +77,13 @@ $width-mobile-xs-plus-1: 415px;
 	// Tablet
 	.wk-cols-t,
 	.wk-cols-8 .wk-cols-t,
+	.wk-cols-12 .wk-cols-t,
 	.wk-cols-14 .wk-cols-t,
 	.wk-cols-16 .wk-cols-t,
 	// Table equals
 	.wk-cols-te,
 	.wk-cols-8 .wk-cols-te,
+	.wk-cols-12 .wk-cols-te,
 	.wk-cols-14 .wk-cols-te,
 	.wk-cols-sys-13 .wk-cols-te
 		flex-direction: column
@@ -88,13 +93,15 @@ $width-mobile-xs-plus-1: 415px;
 	// Mobile equals
 	.wk-cols-me, 
 	.wk-cols-8 .wk-cols-me,
+	.wk-cols-12 .wk-cols-me,
 	.wk-cols-14 .wk-cols-me,
 	.wk-cols-16 .wk-cols-me
 		> [class^="wk-col-"]
 			width: 50%
 
 @media ( min-width: $width-mobile-plus-1 )
-	.wk-cols
+	.wk-cols,
+	.wk-cols-12
 		.wk-col-1
 			width: 100% / 12 * 1
 		.wk-col-2
@@ -214,7 +221,8 @@ $width-mobile-xs-plus-1: 415px;
 		.wk-col-16
 			width: 100% / 16 * 16
 
-	.wk-cols-te
+	.wk-cols-te,
+	.wk-cols-12 .wk-cols-te
 		.wk-col-1
 			width: 100% / 12 * 1
 		.wk-col-2
@@ -369,7 +377,8 @@ $width-mobile-xs-plus-1: 415px;
 
 @media ( min-width: $width-mobile-xs-plus-1 )
 	
-	.wk-cols-t
+	.wk-cols-t,
+	.wk-cols-12 .wk-cols-t
 		.wk-col-1
 			width: 100% / 12 * 1
 		.wk-col-2
@@ -489,7 +498,9 @@ $width-mobile-xs-plus-1: 415px;
 		.wk-col-16
 			width: 100% / 16 * 16
 
-	.wk-cols-me
+
+	.wk-cols-me,
+	.wk-cols-12 .wk-cols-me
 		.wk-col-1
 			width: 100% / 12 * 1
 		.wk-col-2
@@ -514,7 +525,6 @@ $width-mobile-xs-plus-1: 415px;
 			width: 100% / 12 * 11
 		.wk-col-12
 			width: 100%
-
 
 	.wk-cols-8 .wk-cols-me
 		.wk-col-1
@@ -608,19 +618,19 @@ $width-mobile-xs-plus-1: 415px;
 		.wk-col-15
 			width: 100% / 16 * 15
 		.wk-col-16
-			width: 100% / 16 * 16
-
-		
+			width: 100% / 16 * 16		
 
 @media ( min-width: $width-mobile-xs-plus-1 ) and ( max-width: $width-mobile-plus-1 )
 	.wk-cols-te,
 	.wk-cols-8 .wk-cols-te,
+	.wk-cols-12 .wk-cols-te,
 	.wk-cols-14 .wk-cols-te,
 	.wk-cols-16 .wk-cols-te
 		> [class^="wk-col-"]
 			width: 50%
 
-.wk-cols-m
+.wk-cols-m,
+.wk-cols-12 .wk-cols-m
 	.wk-col-1
 		width: 100% / 12 * 1
 	.wk-col-2
@@ -738,29 +748,37 @@ $width-mobile-xs-plus-1: 415px;
 
 
 
-
-
-
 /*========== No Flexbox =========*/
 
 // Para exploradores que no soportan Flexbox
 // float sustituirá a display: flex
 
-.no-flexbox
-	[class^="wk-col-"],
-	.wk-col
-		float: left
+@media ( max-width: $width-mobile-xs )
+	.no-flexbox .wk-cols-m,
+	.no-flexbox .wk-cols-me
+		[class^="wk-col-"],
+		.wk-col
+			float: left
+
+@media ( min-width: $width-mobile-xs-plus-1 )
+	.no-flexbox
+		[class^="wk-col-"],
+		.wk-col
+			float: left
+
 
 @media ( max-width: $width-mobile-xs )
 	.no-flexbox
 		.wk-cols-t,
-		.wk-cols-8t,
-		.wk-cols-14t,
-		.wk-cols-16t,
+		.wk-cols-8 .wk-cols-t,
+		.wk-cols-12 .wk-cols-t,
+		.wk-cols-14 .wk-cols-t,
+		.wk-cols-16 .wk-cols-t,
 		.wk-cols-te,
-		.wk-cols-8te,
-		.wk-cols-14te,
-		.wk-cols-16te
+		.wk-cols-8 .wk-cols-te,
+		.wk-cols-12 .wk-cols-te,
+		.wk-cols-14 .wk-cols-te,
+		.wk-cols-16 .wk-cols-te
 			> [class^="wk-col-"]
 				float: none
 

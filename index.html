@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-flexbox" srvr="Alumin">
+<html srvr="Alumin">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
   <body>
     <div id="wrapper">
       <header>
-        <section class="wk-section-width-wrapp">
+        <section class="wk-section-wrapp">
           <div class="wk-cols-m">
             <div class="wk-col-6"><img width="32" src="img/favicon.png"></div>
             <div class="wk-col-6">
@@ -30,17 +30,10 @@
           </div>
         </section>
       </header>
-      <section class="wk-section wk-section-first wk-section-width-full"><img width="200" src="img/wpkit-logo-symbol.svg"></section>
-      <section class="wk-section wk-block-dark wk-contrast">
-        <div class="wk-block-padding">.wk-section .wk-section-first / .wk-block-padding </div>
-      </section>
-      <section class="wk-section wk-section-wrapp wk-block-dark wk-contrast-medium"> 
-        <div class="wk-block-padding">.wk-section.wk-section-wrapp / .wk-block-padding  </div>
-      </section>
+      <section class="wk-section wk-section-first wk-section-width-full"><img width="100" src="img/wpkit-logo-symbol.svg"></section>
       <section class="wk-section wk-section-wrapp">
-        <div class="wk-block-padding">.wk-section </div>
-        <h3>Equal js</h3>
-        <div class="wk-cols">
+        <h3>wk-cols / No Flexbox Todos los items se apilan en móvil</h3>
+        <div class="wk-cols" style="background-color: gold;">
           <div class="wk-col">col 1</div>
           <div class="wk-col">col 2</div>
           <div class="wk-col">col 3</div>
@@ -54,8 +47,38 @@
           <div class="wk-col">col 11</div>
           <div class="wk-col">col 12</div>
         </div>
-        <h3>WK-COLS Se apilarán en todos los dispositivos móviles</h3>
-        <div class="wk-cols">
+        <h3>wk-cols-t / No Flexbox permanecerán en tablet solo se apilarán en móvil xss</h3>
+        <div class="wk-cols-t" style="background-color: tomato;">
+          <div class="wk-col">col 1</div>
+          <div class="wk-col">col 2</div>
+          <div class="wk-col">col 3</div>
+          <div class="wk-col">col 4</div>
+          <div class="wk-col">col 5</div>
+          <div class="wk-col">col 6</div>
+          <div class="wk-col">col 7</div>
+          <div class="wk-col">col 8</div>
+          <div class="wk-col">col 9</div>
+          <div class="wk-col">col 10</div>
+          <div class="wk-col">col 11</div>
+          <div class="wk-col">col 12</div>
+        </div>
+        <h3>wk-cols-m / No Flexbox Nunca se apilarán</h3>
+        <div class="wk-cols-m" style="background-color: dodgerblue;">
+          <div class="wk-col">col 1</div>
+          <div class="wk-col">col 2</div>
+          <div class="wk-col">col 3</div>
+          <div class="wk-col">col 4</div>
+          <div class="wk-col">col 5</div>
+          <div class="wk-col">col 6</div>
+          <div class="wk-col">col 7</div>
+          <div class="wk-col">col 8</div>
+          <div class="wk-col">col 9</div>
+          <div class="wk-col">col 10</div>
+          <div class="wk-col">col 11</div>
+          <div class="wk-col">col 12</div>
+        </div>
+        <h3>wk-cols / wk-cols-1 - Se apilarán en todos los dispositivos móviles</h3>
+        <div class="wk-cols" style="background-color: aquamarine;">
           <div class="wk-col-1">col 1</div>
           <div class="wk-col-1">col 2</div>
           <div class="wk-col-1">col 3</div>
@@ -70,7 +93,7 @@
           <div class="wk-col-1">col 12</div>
         </div>
         <h3>WK Cols 8</h3>
-        <div class="wk-cols-8">
+        <div class="wk-cols-8" style="background-color: mediumpurple;">
           <div class="wk-cols-t">
             <div class="wk-col-1">1 t</div>
             <div class="wk-col-7">7 t</div>
@@ -83,13 +106,13 @@
             <div class="wk-col-3">3 m</div>
             <div class="wk-col-5">5 m</div>
           </div>
-          <div class="wk-cols-me">
-            <div class="wk-col-4">4 me</div>
-            <div class="wk-col-4">4 me</div>
-          </div>
           <div class="wk-cols">
-            <div class="wk-col-5">5</div>
-            <div class="wk-col-3">3</div>
+            <div class="wk-col-4">4 </div>
+            <div class="wk-col-4">4 </div>
+          </div>
+          <div class="wk-cols-me">
+            <div class="wk-col-5">5 me</div>
+            <div class="wk-col-3">3 me</div>
           </div>
           <div class="wk-cols">
             <div class="wk-col-6">6</div>
@@ -101,61 +124,63 @@
           </div>
         </div>
         <h3>WK Cols 12</h3>
-        <div class="wk-cols-t">
-          <div class="wk-col-1">1 t</div>
-          <div class="wk-col-11">11 t</div>
-        </div>
-        <div class="wk-cols-te">
-          <div class="wk-col-2">2 te</div>
-          <div class="wk-col-10">10 te</div>
-        </div>
-        <div class="wk-cols-m">
-          <div class="wk-col-3">3 m</div>
-          <div class="wk-col-9">9 m</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-4">4 me</div>
-          <div class="wk-col-8">8 me</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-5">5</div>
-          <div class="wk-col-7">7</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-6">6</div>
-          <div class="wk-col-6">6</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-7">7</div>
-          <div class="wk-col-5">5</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-8">8</div>
-          <div class="wk-col-4">4</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-9">9</div>
-          <div class="wk-col-3">3</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-10">10</div>
-          <div class="wk-col-2">2</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-11">11</div>
-          <div class="wk-col-1">1</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-12">12</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-2">2a</div>
-          <div class="wk-col-5">5a</div>
-          <div class="wk-col-3">3a</div>
-          <div class="wk-col-2">2a</div>
+        <div class="cont" style="background-color: wheat;">
+          <div class="wk-cols-t">
+            <div class="wk-col-1">1 t</div>
+            <div class="wk-col-11">11 t</div>
+          </div>
+          <div class="wk-cols-te">
+            <div class="wk-col-2">2 te</div>
+            <div class="wk-col-10">10 te</div>
+          </div>
+          <div class="wk-cols-m">
+            <div class="wk-col-3">3 m</div>
+            <div class="wk-col-9">9 m</div>
+          </div>
+          <div class="wk-cols-me">
+            <div class="wk-col-4">4 me</div>
+            <div class="wk-col-8">8 me</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col-5">5</div>
+            <div class="wk-col-7">7</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col-6">6</div>
+            <div class="wk-col-6">6</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col-7">7</div>
+            <div class="wk-col-5">5</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col-8">8</div>
+            <div class="wk-col-4">4</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col-9">9</div>
+            <div class="wk-col-3">3</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col-10">10</div>
+            <div class="wk-col-2">2</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col-11">11</div>
+            <div class="wk-col-1">1</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col-12">12</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col-2">2a</div>
+            <div class="wk-col-5">5a</div>
+            <div class="wk-col-3">3a</div>
+            <div class="wk-col-2">2a</div>
+          </div>
         </div>
         <h3>WK Cols 14</h3>
-        <div class="wk-cols-14">
+        <div class="wk-cols-14" style="background-color: aqua;">
           <div class="wk-cols-t">
             <div class="wk-col-1">1 t</div>
             <div class="wk-col-13">13 t</div>
@@ -210,7 +235,7 @@
           </div>
         </div>
         <h3>WK Cols 16</h3>
-        <div class="wk-cols-16">
+        <div class="wk-cols-16" style="background-color: orange;">
           <div class="wk-cols-t">
             <div class="wk-col-1">1 t</div>
             <div class="wk-col-15">15 t</div>
@@ -273,366 +298,506 @@
           </div>
         </div>
         <h3>WK Col e 16</h3>
-        <div class="wk-cols">
-          <div class="wk-col-2e">2e</div>
-          <div class="wk-col-2e">2e</div>
+        <div class="cont" style="background-color: cornflowerblue;">
+          <div class="wk-cols">
+            <div class="wk-col">2e</div>
+            <div class="wk-col">2e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">3e</div>
+            <div class="wk-col">3e</div>
+            <div class="wk-col">3e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">4e</div>
+            <div class="wk-col">4e</div>
+            <div class="wk-col">4e</div>
+            <div class="wk-col">4e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">5e</div>
+            <div class="wk-col">5e</div>
+            <div class="wk-col">5e</div>
+            <div class="wk-col">5e</div>
+            <div class="wk-col">5e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">6e</div>
+            <div class="wk-col">6e</div>
+            <div class="wk-col">6e</div>
+            <div class="wk-col">6e</div>
+            <div class="wk-col">6e</div>
+            <div class="wk-col">6e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+          </div>
+          <div class="wk-cols">
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+          </div>
         </div>
-        <div class="wk-cols">
-          <div class="wk-col-3e">3e</div>
-          <div class="wk-col-3e">3e</div>
-          <div class="wk-col-3e">3e</div>
+        <h3>WK Col t 16</h3>
+        <div class="cont" style="background-color: gold;">
+          <div class="wk-cols-t">
+            <div class="wk-col">2e</div>
+            <div class="wk-col">2e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">3e</div>
+            <div class="wk-col">3e</div>
+            <div class="wk-col">3e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">4e</div>
+            <div class="wk-col">4e</div>
+            <div class="wk-col">4e</div>
+            <div class="wk-col">4e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">5e</div>
+            <div class="wk-col">5e</div>
+            <div class="wk-col">5e</div>
+            <div class="wk-col">5e</div>
+            <div class="wk-col">5e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">6e</div>
+            <div class="wk-col">6e</div>
+            <div class="wk-col">6e</div>
+            <div class="wk-col">6e</div>
+            <div class="wk-col">6e</div>
+            <div class="wk-col">6e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+            <div class="wk-col">7e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+            <div class="wk-col">8e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+            <div class="wk-col">9e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+            <div class="wk-col">10e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+            <div class="wk-col">11e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+            <div class="wk-col">12e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+            <div class="wk-col">13e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+            <div class="wk-col">14e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+            <div class="wk-col">15e</div>
+          </div>
+          <div class="wk-cols-t">
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+            <div class="wk-col">16e</div>
+          </div>
         </div>
-        <div class="wk-cols">
-          <div class="wk-col-4e">4e</div>
-          <div class="wk-col-4e">4e</div>
-          <div class="wk-col-4e">4e</div>
-          <div class="wk-col-4e">4e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-5e">5e</div>
-          <div class="wk-col-5e">5e</div>
-          <div class="wk-col-5e">5e</div>
-          <div class="wk-col-5e">5e</div>
-          <div class="wk-col-5e">5e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-6e">6e</div>
-          <div class="wk-col-6e">6e</div>
-          <div class="wk-col-6e">6e</div>
-          <div class="wk-col-6e">6e</div>
-          <div class="wk-col-6e">6e</div>
-          <div class="wk-col-6e">6e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-7e">7e</div>
-          <div class="wk-col-7e">7e</div>
-          <div class="wk-col-7e">7e</div>
-          <div class="wk-col-7e">7e</div>
-          <div class="wk-col-7e">7e</div>
-          <div class="wk-col-7e">7e</div>
-          <div class="wk-col-7e">7e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-8e">8e</div>
-          <div class="wk-col-8e">8e</div>
-          <div class="wk-col-8e">8e</div>
-          <div class="wk-col-8e">8e</div>
-          <div class="wk-col-8e">8e</div>
-          <div class="wk-col-8e">8e</div>
-          <div class="wk-col-8e">8e</div>
-          <div class="wk-col-8e">8e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-9e">9e</div>
-          <div class="wk-col-9e">9e</div>
-          <div class="wk-col-9e">9e</div>
-          <div class="wk-col-9e">9e</div>
-          <div class="wk-col-9e">9e</div>
-          <div class="wk-col-9e">9e</div>
-          <div class="wk-col-9e">9e</div>
-          <div class="wk-col-9e">9e</div>
-          <div class="wk-col-9e">9e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-10e">10e</div>
-          <div class="wk-col-10e">10e</div>
-          <div class="wk-col-10e">10e</div>
-          <div class="wk-col-10e">10e</div>
-          <div class="wk-col-10e">10e</div>
-          <div class="wk-col-10e">10e</div>
-          <div class="wk-col-10e">10e</div>
-          <div class="wk-col-10e">10e</div>
-          <div class="wk-col-10e">10e</div>
-          <div class="wk-col-10e">10e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-11e">11e</div>
-          <div class="wk-col-11e">11e</div>
-          <div class="wk-col-11e">11e</div>
-          <div class="wk-col-11e">11e</div>
-          <div class="wk-col-11e">11e</div>
-          <div class="wk-col-11e">11e</div>
-          <div class="wk-col-11e">11e</div>
-          <div class="wk-col-11e">11e</div>
-          <div class="wk-col-11e">11e</div>
-          <div class="wk-col-11e">11e</div>
-          <div class="wk-col-11e">11e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-          <div class="wk-col-12e">12e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-          <div class="wk-col-13e">13e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-          <div class="wk-col-14e">14e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-          <div class="wk-col-15e">15e</div>
-        </div>
-        <div class="wk-cols">
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-          <div class="wk-col-16e">16e</div>
-        </div>
-        <h3>WK Col me 16</h3>
-        <div class="wk-cols-me">
-          <div class="wk-col-2me">2e</div>
-          <div class="wk-col-2me">2e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-3me">3e</div>
-          <div class="wk-col-3me">3e</div>
-          <div class="wk-col-3me">3e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-4me">4e</div>
-          <div class="wk-col-4me">4e</div>
-          <div class="wk-col-4me">4e</div>
-          <div class="wk-col-4me">4e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-5me">5e</div>
-          <div class="wk-col-5me">5e</div>
-          <div class="wk-col-5me">5e</div>
-          <div class="wk-col-5me">5e</div>
-          <div class="wk-col-5me">5e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-6me">6e</div>
-          <div class="wk-col-6me">6e</div>
-          <div class="wk-col-6me">6e</div>
-          <div class="wk-col-6me">6e</div>
-          <div class="wk-col-6me">6e</div>
-          <div class="wk-col-6me">6e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-7me">7e</div>
-          <div class="wk-col-7me">7e</div>
-          <div class="wk-col-7me">7e</div>
-          <div class="wk-col-7me">7e</div>
-          <div class="wk-col-7me">7e</div>
-          <div class="wk-col-7me">7e</div>
-          <div class="wk-col-7me">7e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-8me">8e</div>
-          <div class="wk-col-8me">8e</div>
-          <div class="wk-col-8me">8e</div>
-          <div class="wk-col-8me">8e</div>
-          <div class="wk-col-8me">8e</div>
-          <div class="wk-col-8me">8e</div>
-          <div class="wk-col-8me">8e</div>
-          <div class="wk-col-8me">8e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-9me">9e</div>
-          <div class="wk-col-9me">9e</div>
-          <div class="wk-col-9me">9e</div>
-          <div class="wk-col-9me">9e</div>
-          <div class="wk-col-9me">9e</div>
-          <div class="wk-col-9me">9e</div>
-          <div class="wk-col-9me">9e</div>
-          <div class="wk-col-9me">9e</div>
-          <div class="wk-col-9me">9e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-10me">10e</div>
-          <div class="wk-col-10me">10e</div>
-          <div class="wk-col-10me">10e</div>
-          <div class="wk-col-10me">10e</div>
-          <div class="wk-col-10me">10e</div>
-          <div class="wk-col-10me">10e</div>
-          <div class="wk-col-10me">10e</div>
-          <div class="wk-col-10me">10e</div>
-          <div class="wk-col-10me">10e</div>
-          <div class="wk-col-10me">10e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-11me">11e</div>
-          <div class="wk-col-11me">11e</div>
-          <div class="wk-col-11me">11e</div>
-          <div class="wk-col-11me">11e</div>
-          <div class="wk-col-11me">11e</div>
-          <div class="wk-col-11me">11e</div>
-          <div class="wk-col-11me">11e</div>
-          <div class="wk-col-11me">11e</div>
-          <div class="wk-col-11me">11e</div>
-          <div class="wk-col-11me">11e</div>
-          <div class="wk-col-11me">11e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-          <div class="wk-col-12me">12e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-          <div class="wk-col-13me">13e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-          <div class="wk-col-14me">14e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-          <div class="wk-col-15me">15e</div>
-        </div>
-        <div class="wk-cols-me">
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-          <div class="wk-col-16me">16e</div>
-        </div>
-        <h3>WK-T-COLS Se apilarán solo en móvil xs</h3>
-        <div class="wk-cols-t">
-          <div class="wk-col-1">col 1</div>
-          <div class="wk-col-1">col 2</div>
-          <div class="wk-col-1">col 3</div>
-          <div class="wk-col-1">col 4</div>
-          <div class="wk-col-1">col 5</div>
-          <div class="wk-col-1">col 6</div>
-          <div class="wk-col-1">col 7</div>
-          <div class="wk-col-1">col 8</div>
-          <div class="wk-col-1">col 9</div>
-          <div class="wk-col-1">col 10</div>
-          <div class="wk-col-1">col 11</div>
-          <div class="wk-col-1">col 12</div>
-        </div>
-        <h3>WK-M-COLS Núnca se apliarán</h3>
+        <h3>WK Col m 16</h3>
         <div class="wk-cols-m">
-          <div class="wk-col-1">col 1</div>
-          <div class="wk-col-1">col 2</div>
-          <div class="wk-col-1">col 3</div>
-          <div class="wk-col-1">col 4</div>
-          <div class="wk-col-1">col 5</div>
-          <div class="wk-col-1">col 6</div>
-          <div class="wk-col-1">col 7</div>
-          <div class="wk-col-1">col 8</div>
-          <div class="wk-col-1">col 9</div>
-          <div class="wk-col-1">col 10</div>
-          <div class="wk-col-1">col 11</div>
-          <div class="wk-col-1">col 12</div>
+          <div class="wk-col">2e</div>
+          <div class="wk-col">2e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">3e</div>
+          <div class="wk-col">3e</div>
+          <div class="wk-col">3e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">4e</div>
+          <div class="wk-col">4e</div>
+          <div class="wk-col">4e</div>
+          <div class="wk-col">4e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">5e</div>
+          <div class="wk-col">5e</div>
+          <div class="wk-col">5e</div>
+          <div class="wk-col">5e</div>
+          <div class="wk-col">5e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">6e</div>
+          <div class="wk-col">6e</div>
+          <div class="wk-col">6e</div>
+          <div class="wk-col">6e</div>
+          <div class="wk-col">6e</div>
+          <div class="wk-col">6e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">7e</div>
+          <div class="wk-col">7e</div>
+          <div class="wk-col">7e</div>
+          <div class="wk-col">7e</div>
+          <div class="wk-col">7e</div>
+          <div class="wk-col">7e</div>
+          <div class="wk-col">7e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">8e</div>
+          <div class="wk-col">8e</div>
+          <div class="wk-col">8e</div>
+          <div class="wk-col">8e</div>
+          <div class="wk-col">8e</div>
+          <div class="wk-col">8e</div>
+          <div class="wk-col">8e</div>
+          <div class="wk-col">8e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">9e</div>
+          <div class="wk-col">9e</div>
+          <div class="wk-col">9e</div>
+          <div class="wk-col">9e</div>
+          <div class="wk-col">9e</div>
+          <div class="wk-col">9e</div>
+          <div class="wk-col">9e</div>
+          <div class="wk-col">9e</div>
+          <div class="wk-col">9e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">10e</div>
+          <div class="wk-col">10e</div>
+          <div class="wk-col">10e</div>
+          <div class="wk-col">10e</div>
+          <div class="wk-col">10e</div>
+          <div class="wk-col">10e</div>
+          <div class="wk-col">10e</div>
+          <div class="wk-col">10e</div>
+          <div class="wk-col">10e</div>
+          <div class="wk-col">10e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">11e</div>
+          <div class="wk-col">11e</div>
+          <div class="wk-col">11e</div>
+          <div class="wk-col">11e</div>
+          <div class="wk-col">11e</div>
+          <div class="wk-col">11e</div>
+          <div class="wk-col">11e</div>
+          <div class="wk-col">11e</div>
+          <div class="wk-col">11e</div>
+          <div class="wk-col">11e</div>
+          <div class="wk-col">11e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+          <div class="wk-col">12e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+          <div class="wk-col">13e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+          <div class="wk-col">14e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+          <div class="wk-col">15e</div>
+        </div>
+        <div class="wk-cols-m">
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
+          <div class="wk-col">16e</div>
         </div>
       </section>
       <section class="wk-section wk-section-last"> 
