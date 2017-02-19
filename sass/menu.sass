@@ -1,14 +1,17 @@
+/*========== Menú ==========*/
+
 .wk-menu
-    list-style: none
-    padding: 0
-    margin: 0
+	list-style: none
+	display: flex
+	align-items: center
+	padding: 0
+	margin: 0
 
-.wk-menu * 
-    display: inline-block
-    padding-top: 12px
-    padding-right: 0
-    padding-bottom: 12px
-    padding-left: 0
+	li 
+		display: inline-block
+    
+/*========== .no-flexbox Menú ==========*/
 
-.wk-menu *:not(:last-child) 
-    margin-right: 12px
+.no-flexbox .wk-menu
+	display: table-cell
+	vertical-align: middle

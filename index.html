@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html srvr="Alumin">
+<html class="no-flexbox" srvr="Alumin">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,24 +14,23 @@
     <script src="assets/prismjs/prism.js"> </script>
   </head>
   <body>
-    <div id="wrapper">
-      <header>
-        <section class="wk-section-wrapp">
-          <div class="wk-cols-m">
-            <div class="wk-col-6"><img width="32" src="img/favicon.png"></div>
-            <div class="wk-col-6">
-              <nav>
-                <ul class="wk-menu">
-                  <li>Item 1</li>
-                  <li>Item 2</li>
-                </ul>
-              </nav>
-            </div>
+    <div id="wraper">
+      <header></header>
+      <section class="wk-section-wrap">
+        <div class="wk-cols-m">
+          <div class="wk-col wk-flex wk-flex-align-center"><img width="32" src="img/favicon.png"></div>
+          <div class="wk-col">
+            <nav>
+              <ul class="wk-menu" style="height: 50px;">
+                <li>Item 1</li>
+                <li>Item 2</li>
+              </ul>
+            </nav>
           </div>
-        </section>
-      </header>
-      <section class="wk-section wk-section-first wk-section-width-full"><img width="100" src="img/wpkit-logo-symbol.svg"></section>
-      <section class="wk-section wk-section-wrapp">
+        </div>
+      </section>
+      <section class="wk-section-wrap"><img width="100" src="img/wpkit-logo-symbol.svg"></section>
+      <section class="wk-section wk-section-wrap">
         <h3>wk-cols / No Flexbox Todos los items se apilan en móvil</h3>
         <div class="wk-cols" style="background-color: gold;">
           <div class="wk-col">col 1</div>
@@ -799,9 +798,6 @@
           <div class="wk-col">16e</div>
           <div class="wk-col">16e</div>
         </div>
-      </section>
-      <section class="wk-section wk-section-last"> 
-        <div class="wk-block-padding">.wk-section.wk-section-last / .wk-block-padding </div>
       </section>
     </div>
   </body>

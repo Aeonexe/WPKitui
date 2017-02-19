@@ -1,5 +1,5 @@
 doctype html
-html(srvr="Alumin")
+html.no-flexbox(srvr="Alumin")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -13,22 +13,20 @@ html(srvr="Alumin")
 		link(rel="stylesheet" href="assets/prismjs/prism.css")
 		script(src="assets/prismjs/prism.js") 
 	body
-		#wrapper
+		#wraper
 
 			header
-				section.wk-section-wrapp
-					.wk-cols-m
-						.wk-col-6
-							img(width="32" src="img/favicon.png")
-						.wk-col-6
-							nav
-								ul.wk-menu
-									li Item 1
-									li Item 2
+			section.wk-section-wrap
+				.wk-cols-m
+					.wk-col.wk-flex.wk-flex-align-center
+						img(width="32" src="img/favicon.png")
+					.wk-col
+						nav
+							ul.wk-menu(style="height: 50px")
+								li Item 1
+								li Item 2
 
-
-
-			section.wk-section.wk-section-first.wk-section-width-full
+			section.wk-section-wrap
 				img(width="100" src="img/wpkit-logo-symbol.svg")
 
 
@@ -36,10 +34,10 @@ html(srvr="Alumin")
 			//- section.wk-section.wk-block-dark.wk-contrast
 				.wk-block-padding .wk-section .wk-section-first / .wk-block-padding 
 			
-			//- section.wk-section.wk-section-wrapp.wk-block-dark.wk-contrast-medium 
-				.wk-block-padding .wk-section.wk-section-wrapp / .wk-block-padding  
+			//- section.wk-section.wk-section-wrap.wk-block-dark.wk-contrast-medium 
+				.wk-block-padding .wk-section.wk-section-wrap / .wk-block-padding  
 			
-			section.wk-section.wk-section-wrapp
+			section.wk-section.wk-section-wrap
 
 				h3 wk-cols / No Flexbox Todos los items se apilan en móvil
 				.wk-cols(style="background-color: gold")
@@ -449,8 +447,6 @@ html(srvr="Alumin")
 						.wk-col 16e
 
 
-			section.wk-section.wk-section-last 
-				.wk-block-padding .wk-section.wk-section-last / .wk-block-padding 
 
 
 
