@@ -8,4 +8,9 @@
 
 .wk-section-wrap
 	width: 100%
-	max-width: 1000px
+
+@for $i from 700 through 1600
+	@if $i % 2 == 0
+		.wk-wrap-#{$i}
+			.wk-section-wrap
+				max-width: #{$i}px

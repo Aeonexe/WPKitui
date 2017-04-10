@@ -6,11 +6,11 @@ $text-color-contrast-medium: #aaa;
 
 $section-max-width: 800px;
 
-$width-mobile: 770px;
-$width-mobile-xs: 414px;
+$mobile: 770px;
+$mobile-xs: 414px;
 
-$width-mobile-plus-1: 771px;
-$width-mobile-xs-plus-1: 415px;
+$desktop: 771px;
+$tablet: 415px;
 
 /*========== Cols ==========*/
 
@@ -66,7 +66,7 @@ $width-mobile-xs-plus-1: 415px;
 		flex-basis: 50%
 
 
-@media ( max-width: $width-mobile )
+@media ( max-width: $mobile )
 	.wk-cols,
 	.wk-cols-8 .wk-cols,
 	.wk-cols-12 .wk-cols,
@@ -76,7 +76,7 @@ $width-mobile-xs-plus-1: 415px;
 		> [class^='wk-col-']
 			width: 100%
 
-@media ( max-width: $width-mobile-xs )
+@media ( max-width: $mobile-xs )
 	// Tablet
 	.wk-cols-t,
 	.wk-cols-8 .wk-cols-t,
@@ -102,7 +102,7 @@ $width-mobile-xs-plus-1: 415px;
 		> [class^="wk-col-"]
 			width: 50%
 
-@media ( min-width: $width-mobile-plus-1 )
+@media ( min-width: $desktop )
 	.wk-cols,
 	.wk-cols-12
 		.wk-col-1
@@ -378,7 +378,7 @@ $width-mobile-xs-plus-1: 415px;
 		.wk-col-16e
 			width: 100% / 16 * 1	
 
-@media ( min-width: $width-mobile-xs-plus-1 )
+@media ( min-width: $tablet )
 	
 	.wk-cols-t,
 	.wk-cols-12 .wk-cols-t
@@ -623,7 +623,7 @@ $width-mobile-xs-plus-1: 415px;
 		.wk-col-16
 			width: 100% / 16 * 16		
 
-@media ( min-width: $width-mobile-xs-plus-1 ) and ( max-width: $width-mobile-plus-1 )
+@media ( min-width: $tablet ) and ( max-width: $mobile )
 	.wk-cols-te,
 	.wk-cols-8 .wk-cols-te,
 	.wk-cols-12 .wk-cols-te,
@@ -756,21 +756,21 @@ $width-mobile-xs-plus-1: 415px;
 // Para exploradores que no soportan Flexbox
 // float sustituirá a display: flex
 
-@media ( max-width: $width-mobile-xs )
+@media ( max-width: $mobile-xs )
 	.no-flexbox .wk-cols-m,
 	.no-flexbox .wk-cols-me
 		[class^="wk-col-"],
 		.wk-col
 			float: left
 
-@media ( min-width: $width-mobile-xs-plus-1 )
+@media ( min-width: $tablet )
 	.no-flexbox
 		[class^="wk-col-"],
 		.wk-col
 			float: left
 
 
-@media ( max-width: $width-mobile-xs )
+@media ( max-width: $mobile-xs )
 	.no-flexbox
 		.wk-cols-t,
 		.wk-cols-8 .wk-cols-t,
@@ -791,6 +791,5 @@ $width-mobile-xs-plus-1: 415px;
 			content: ""
 			display: table
 			clear: both
-
-
+ 
 

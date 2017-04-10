@@ -1,3 +1,7 @@
+@import variables
+
+$v: n;
+
 * 
 	box-sizing: border-box
 
@@ -5,11 +9,35 @@ body
 	margin: 0
 	padding: 0
 
+/*========== Mobile & Desktop only =========*/
+
+// Solo desktop
+@media ( min-width: $desktop)
+	.wk-m, 
+	.wk-t, 
+	.wk-xs
+		display: none
+
+// Solo móvil
+@media ( max-width: $mobile )
+	.wk-d
+		display: none
+
+// Solo móvil xs
+@media ( max-width: $mobile-xs )
+	.wk-t
+		display: none
+	
+// No móvil xs 
+@media ( min-width: $tablet )
+	.wk-xs
+		display: none
+
 /*========== Menu =========*/
 
 @import sections
 
-$v: n;
+$v: n; 
 
 /*========== Cols =========*/
 
@@ -23,9 +51,16 @@ $v: n;
 
 $v: n;
 
-/*========== Menu =========*/
+/*========== Display =========*/
+
 
 @import display
+
+$v: n;
+
+/*========== Text =========*/
+
+@import text
 
 $v: n;
 

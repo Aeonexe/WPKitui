@@ -1,26 +1,36 @@
+@import variables
+
+$n: s;
+
+/*========== Flex ==========*/
+
 .wk-flex
 	display: flex
 
 .wk-flex-column
+	display: flex
 	flex-direction: column
 
 .wk-flex-column-reverse
+	display: flex
 	flex-direction: column-reverse
 
 .wk-flex-row
+	display: flex
 	flex-direction: row
 
 .wk-flex-row-reverse
+	display: flex
 	flex-direction: reverse
 
 .wk-flex-wrap
 	flex-wrap: wrap
 
-.wk-flex-nowrap
-	flex-wrap: nowrap
-
 .wk-flex-wrap-reverse
 	flex-wrap: wrap-reverse
+
+.wk-flex-nowrap
+	flex-wrap: nowrap
 
 /*========== Flex Align ==========*/
 
@@ -35,6 +45,9 @@
 
 .wk-flex-align-end
 	align-items: end
+
+.wk-flex-align-strech
+	align-items: strech
 
 /*========== Flex Justify ==========*/
 
@@ -55,8 +68,8 @@
 
 /*========== .no-flexbox Flex ==========*/
 
-.no-flexbox .wk-flex > *,
-.no-flexbox .wk-flex-row > * 	
+.no-flexbox .wk-flex:not(.wk-flex-column) > *,
+.no-flexbox .wk-flex-row:not(.wk-flex-column) > * 	
 	display: inline-block
 
 .no-flexbox .wk-flex-column > *
@@ -68,16 +81,22 @@
 /*===== .no-flexbox Flex align =====*/
 
 .no-flexbox .wk-flex-align-start
-	display: table-cell
-	vertical-align: top
+	display: table
+	> *
+		display: table-cell
+		vertical-align: top
 
 .no-flexbox .wk-flex-align-center
-	display: table-cell
-	vertical-align: middle
+	display: table
+	> *
+		display: table-cell
+		vertical-align: middle
 
 .no-flexbox .wk-flex-align-end
-	display: table-cell
-	vertical-align: bottom
+	display: table
+	> *
+		display: table-cell
+		vertical-align: bottom
 
 /*===== .no-flexbox Flex Justify =====*/
 
@@ -105,3 +124,733 @@
 
 .wk-table
 	display: table
+
+
+
+
+
+
+
+
+
+
+
+
+/*========== Children Flex ==========*/
+
+.wk-children-flex > * 
+	display: flex
+
+
+.wk-children-flex-column > *
+	display: flex
+	flex-direction: column
+
+.wk-children-flex-column-reverse > *
+	display: flex
+	flex-direction: column-reverse
+
+.wk-children-flex-row > *
+	display: flex
+	flex-direction: row
+
+.wk-children-flex-row-reverse > *
+	display: flex
+	flex-direction: reverse
+
+.wk-children-flex-wrap > *
+	flex-wrap: wrap
+
+.wk-children-flex-wrap-reverse > *
+	flex-wrap: wrap-reverse
+
+.wk-children-flex-nowrap > *
+	flex-wrap: nowrap
+
+/*========== Flex Align ==========*/
+
+.wk-children-flex-align-baseline > *
+	align-items: baseline
+
+.wk-children-flex-align-start > *
+	align-items: start
+
+.wk-children-flex-align-center > *
+	align-items: center
+
+.wk-children-flex-align-end > *
+	align-items: end
+
+.wk-children-flex-align-strech > *
+	align-items: strech
+
+/*========== Flex Justify ==========*/
+
+.wk-children-flex-justify-center > *
+	justify-content: center
+
+.wk-children-flex-justify-end > *
+	justify-content: flex-end
+
+.wk-children-flex-justify-start > *
+	justify-content: flex-start
+
+.wk-children-flex-justify-around > *
+	justify-content: space-around
+
+.wk-children-flex-justify-between > *
+	justify-content: space-between
+
+/*========== .no-flexbox Flex ==========*/
+
+.no-flexbox .wk-children-flex:not(.wk-flex-column) > * > *,
+.no-flexbox .wk-children-flex-row:not(.wk-flex-column) > * > *	
+	display: inline-block
+
+.no-flexbox .wk-children-flex-column > * > *
+	display: block
+
+.no-flexbox .wk-children-flex-wrap > * > *
+	float: left
+
+/*===== .no-flexbox Flex align =====*/
+
+.no-flexbox .wk-children-flex-align-start > *
+	display: table
+	> * 
+		display: table-cell
+		vertical-align: top
+
+.no-flexbox .wk-children-children-flex-align-center > *
+	display: table
+	> *
+		display: table-cell
+		vertical-align: middle
+
+.no-flexbox .wk-children-flex-align-end > *
+	display: table
+	> *
+		display: table-cell
+		vertical-align: bottom
+
+/*===== .no-flexbox Flex Justify =====*/
+
+.no-flexbox .wk-children-flex-justify-start > *
+	text-align: left
+
+.no-flexbox .wk-children-flex-justify-center > *
+	text-align: center
+
+.no-flexbox .wk-children-flex-justify-end > *
+	text-align: right
+
+/*===== Display Block / Inline =====*/
+
+.wk-children-block > *
+	display: block
+
+.wk-children-inline-block > *
+	display: inline-block
+
+.wk-children-inline > *
+	display: inline
+
+/*===== Display Block =====*/
+
+.wk-children-table > *
+	display: table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========== Flex devices Desktop ==========*/
+
+
+@media ( min-with: $desktop )
+
+	/*========== Flex ==========*/
+
+	.wk-d-flex
+		display: flex
+
+	.wk-d-flex-column
+		display: flex
+		flex-direction: column
+
+	.wk-d-flex-column-reverse
+		display: flex
+		flex-direction: column-reverse
+
+	.wk-d-flex-row
+		display: flex
+		flex-direction: row
+
+	.wk-d-flex-row-reverse
+		display: flex
+		flex-direction: reverse
+
+	.wk-d-flex-wrap
+		flex-wrap: wrap
+
+	.wk-d-flex-wrap-reverse
+		flex-wrap: wrap-reverse
+
+	.wk-d-flex-nowrap
+		flex-wrap: nowrap
+
+	/*========== Flex Align ==========*/
+
+	.wk-d-flex-align-baseline
+		align-items: baseline
+
+	.wk-d-flex-align-start
+		align-items: start
+
+	.wk-d-flex-align-center
+		align-items: center
+
+	.wk-d-flex-align-end
+		align-items: end
+
+	.wk-d-flex-align-strech
+		align-items: strech
+
+	/*========== Flex Justify ==========*/
+
+	.wk-d-flex-justify-center
+		justify-content: center
+
+	.wk-d-flex-justify-end
+		justify-content: flex-end
+
+	.wk-d-flex-justify-start
+		justify-content: flex-start
+
+	.wk-d-flex-justify-around
+		justify-content: space-around
+
+	.wk-d-flex-justify-between
+		justify-content: space-between
+
+	/*========== .no-flexbox Flex ==========*/
+
+	.no-flexbox .wk-d-flex:not(.wk-flex-column) > *,
+	.no-flexbox .wk-d-flex-row:not(.wk-flex-column) > * 	
+		display: inline-block
+
+	.no-flexbox .wk-d-flex-column > *
+		display: block
+
+	.no-flexbox .wk-d-flex-wrap > *
+		float: left
+
+	/*===== .no-flexbox Flex align =====*/
+
+	.no-flexbox .wk-d-flex-align-start
+		display: table
+		> *
+			display: table-cell
+			vertical-align: top
+
+	.no-flexbox .wk-d-flex-align-center
+		display: table
+		> *
+			display: table-cell
+			vertical-align: middle
+
+	.no-flexbox .wk-d-flex-align-end
+		display: table
+		> *
+			display: table-cell
+			vertical-align: bottom
+
+	/*===== .no-flexbox Flex Justify =====*/
+
+	.no-flexbox .wk-d-flex-justify-start
+		text-align: left
+
+	.no-flexbox .wk-d-flex-justify-center
+		text-align: center
+
+	.no-flexbox .wk-d-flex-justify-end
+		text-align: right
+
+	/*===== Display Block / Inline =====*/
+
+	.wk-d-block
+		display: block
+
+	.wk-d-inline-block
+		display: inline-block
+
+	.wk-d-inline
+		display: inline
+
+	/*===== Display Block =====*/
+
+	.wk-d-table
+		display: table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========== Flex devices Mobile ==========*/
+
+@media ( max-with: $mobile )
+
+	/*========== Flex ==========*/
+
+	.wk-m-flex
+		display: flex
+
+	.wk-m-flex-column
+		display: flex
+		flex-direction: column
+
+	.wk-m-flex-column-reverse
+		display: flex
+		flex-direction: column-reverse
+
+	.wk-m-flex-row
+		display: flex
+		flex-direction: row
+
+	.wk-m-flex-row-reverse
+		display: flex
+		flex-direction: reverse
+
+	.wk-m-flex-wrap
+		flex-wrap: wrap
+
+	.wk-m-flex-wrap-reverse
+		flex-wrap: wrap-reverse
+
+	.wk-m-flex-nowrap
+		flex-wrap: nowrap
+
+	/*========== Flex Align ==========*/
+
+	.wk-m-flex-align-baseline
+		align-items: baseline
+
+	.wk-m-flex-align-start
+		align-items: start
+
+	.wk-m-flex-align-center
+		align-items: center
+
+	.wk-m-flex-align-end
+		align-items: end
+
+	.wk-m-flex-align-strech
+		align-items: strech
+
+	/*========== Flex Justify ==========*/
+
+	.wk-m-flex-justify-center
+		justify-content: center
+
+	.wk-m-flex-justify-end
+		justify-content: flex-end
+
+	.wk-m-flex-justify-start
+		justify-content: flex-start
+
+	.wk-m-flex-justify-around
+		justify-content: space-around
+
+	.wk-m-flex-justify-between
+		justify-content: space-between
+
+	/*========== .no-flexbox Flex ==========*/
+
+	.no-flexbox .wk-m-flex:not(.wk-flex-column) > *,
+	.no-flexbox .wk-m-flex-row:not(.wk-flex-column) > * 	
+		display: inline-block
+
+	.no-flexbox .wk-m-flex-column > *
+		display: block
+
+	.no-flexbox .wk-m-flex-wrap > *
+		float: left
+
+	/*===== .no-flexbox Flex align =====*/
+
+	.no-flexbox .wk-m-flex-align-start
+		display: table
+		> *
+			display: table-cell
+			vertical-align: top
+
+	.no-flexbox .wk-m-flex-align-center
+		display: table
+		> *
+			display: table-cell
+			vertical-align: middle
+
+	.no-flexbox .wk-m-flex-align-end
+		display: table
+		> *
+			display: table-cell
+			vertical-align: bottom
+
+	/*===== .no-flexbox Flex Justify =====*/
+
+	.no-flexbox .wk-m-flex-justify-start
+		text-align: left
+
+	.no-flexbox .wk-m-flex-justify-center
+		text-align: center
+
+	.no-flexbox .wk-m-flex-justify-end
+		text-align: right
+
+	/*===== Display Block / Inline =====*/
+
+	.wk-m-block
+		display: block
+
+	.wk-m-inline-block
+		display: inline-block
+
+	.wk-m-inline
+		display: inline
+
+	/*===== Display Block =====*/
+
+	.wk-m-table
+		display: table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========== Flex devices Tablet ==========*/
+
+@media ( min-with: $tablet ) and ( max-width: $mobile )
+
+	/*========== Flex ==========*/
+
+	.wk-t-flex
+		display: flex
+
+	.wk-t-flex-column
+		display: flex
+		flex-direction: column
+
+	.wk-t-flex-column-reverse
+		display: flex
+		flex-direction: column-reverse
+
+	.wk-t-flex-row
+		display: flex
+		flex-direction: row
+
+	.wk-t-flex-row-reverse
+		display: flex
+		flex-direction: reverse
+
+	.wk-t-flex-wrap
+		flex-wrap: wrap
+
+	.wk-t-flex-wrap-reverse
+		flex-wrap: wrap-reverse
+
+	.wk-t-flex-nowrap
+		flex-wrap: nowrap
+
+	/*========== Flex Align ==========*/
+
+	.wk-t-flex-align-baseline
+		align-items: baseline
+
+	.wk-t-flex-align-start
+		align-items: start
+
+	.wk-t-flex-align-center
+		align-items: center
+
+	.wk-t-flex-align-end
+		align-items: end
+
+	.wk-t-flex-align-strech
+		align-items: strech
+
+	/*========== Flex Justify ==========*/
+
+	.wk-t-flex-justify-center
+		justify-content: center
+
+	.wk-t-flex-justify-end
+		justify-content: flex-end
+
+	.wk-t-flex-justify-start
+		justify-content: flex-start
+
+	.wk-t-flex-justify-around
+		justify-content: space-around
+
+	.wk-t-flex-justify-between
+		justify-content: space-between
+
+	/*========== .no-flexbox Flex ==========*/
+
+	.no-flexbox .wk-t-flex:not(.wk-flex-column) > *,
+	.no-flexbox .wk-t-flex-row:not(.wk-flex-column) > * 	
+		display: inline-block
+
+	.no-flexbox .wk-t-flex-column > *
+		display: block
+
+	.no-flexbox .wk-t-flex-wrap > *
+		float: left
+
+	/*===== .no-flexbox Flex align =====*/
+
+	.no-flexbox .wk-t-flex-align-start
+		display: table
+		> *
+			display: table-cell
+			vertical-align: top
+
+	.no-flexbox .wk-t-flex-align-center
+		display: table
+		> *
+			display: table-cell
+			vertical-align: middle
+
+	.no-flexbox .wk-t-flex-align-end
+		display: table
+		> *
+			display: table-cell
+			vertical-align: bottom
+
+	/*===== .no-flexbox Flex Justify =====*/
+
+	.no-flexbox .wk-t-flex-justify-start
+		text-align: left
+
+	.no-flexbox .wk-t-flex-justify-center
+		text-align: center
+
+	.no-flexbox .wk-t-flex-justify-end
+		text-align: right
+
+	/*===== Display Block / Inline =====*/
+
+	.wk-t-block
+		display: block
+
+	.wk-t-inline-block
+		display: inline-block
+
+	.wk-t-inline
+		display: inline
+
+	/*===== Display Block =====*/
+
+	.wk-t-table
+		display: table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========== Flex devices Xs ==========*/
+
+@media ( max--with: $mobile-xs )
+
+	/*========== Flex ==========*/
+
+	.wk-xs-flex
+		display: flex
+
+	.wk-xs-flex-column
+		display: flex
+		flex-direction: column
+
+	.wk-xs-flex-column-reverse
+		display: flex
+		flex-direction: column-reverse
+
+	.wk-xs-flex-row
+		display: flex
+		flex-direction: row
+
+	.wk-xs-flex-row-reverse
+		display: flex
+		flex-direction: reverse
+
+	.wk-xs-flex-wrap
+		flex-wrap: wrap
+
+	.wk-xs-flex-wrap-reverse
+		flex-wrap: wrap-reverse
+
+	.wk-xs-flex-nowrap
+		flex-wrap: nowrap
+
+	/*========== Flex Align ==========*/
+
+	.wk-xs-flex-align-baseline
+		align-items: baseline
+
+	.wk-xs-flex-align-start
+		align-items: start
+
+	.wk-xs-flex-align-center
+		align-items: center
+
+	.wk-xs-flex-align-end
+		align-items: end
+
+	.wk-xs-flex-align-strech
+		align-items: strech
+
+	/*========== Flex Justify ==========*/
+
+	.wk-xs-flex-justify-center
+		justify-content: center
+
+	.wk-xs-flex-justify-end
+		justify-content: flex-end
+
+	.wk-xs-flex-justify-start
+		justify-content: flex-start
+
+	.wk-xs-flex-justify-around
+		justify-content: space-around
+
+	.wk-xs-flex-justify-between
+		justify-content: space-between
+
+	/*========== .no-flexbox Flex ==========*/
+
+	.no-flexbox .wk-xs-flex:not(.wk-flex-column) > *,
+	.no-flexbox .wk-xs-flex-row:not(.wk-flex-column) > * 	
+		display: inline-block
+
+	.no-flexbox .wk-xs-flex-column > *
+		display: block
+
+	.no-flexbox .wk-xs-flex-wrap > *
+		float: left
+
+	/*===== .no-flexbox Flex align =====*/
+
+	.no-flexbox .wk-xs-flex-align-start
+		display: table
+		> *
+			display: table-cell
+			vertical-align: top
+
+	.no-flexbox .wk-xs-flex-align-center
+		display: table
+		> *
+			display: table-cell
+			vertical-align: middle
+
+	.no-flexbox .wk-xs-flex-align-end
+		display: table
+		> *
+			display: table-cell
+			vertical-align: bottom
+
+	/*===== .no-flexbox Flex Justify =====*/
+
+	.no-flexbox .wk-xs-flex-justify-start
+		text-align: left
+
+	.no-flexbox .wk-xs-flex-justify-center
+		text-align: center
+
+	.no-flexbox .wk-xs-flex-justify-end
+		text-align: right
+
+	/*===== Display Block / Inline =====*/
+
+	.wk-xs-block
+		display: block
+
+	.wk-xs-inline-block
+		display: inline-block
+
+	.wk-xs-inline
+		display: inline
+
+	/*===== Display Block =====*/
+
+	.wk-xs-table
+		display: table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
