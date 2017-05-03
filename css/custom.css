@@ -11,7 +11,7 @@ mark {
   padding: 0px 4px;
 }
 
-main article [class^="wk-col-"],
+main article [class*="wk-col-"],
 main article .wk-col {
   background-color: #dcdcdc;
   box-sizing: border-box;

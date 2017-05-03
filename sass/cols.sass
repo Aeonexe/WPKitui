@@ -53,11 +53,13 @@ $tablet: 415px;
 // 	14me
 // 	16me
 
-[class^="wk-cols"]:not(.wk-cols-8):not(.wk-cols-14):not(.wk-cols-16)
+[class*="wk-cols"]
 	width: 100%
+
+[class*="wk-cols"]:not(.wk-cols-8):not(.wk-cols-14):not(.wk-cols-16) 
 	display: flex
 	
-	[class^="wk-col-"],
+	[class*="wk-col-"],
 	.wk-col
 		flex-grow: 1
 		flex-shrink: 1
@@ -73,7 +75,7 @@ $tablet: 415px;
 	.wk-cols-14 .wk-cols,
 	.wk-cols-16 .wk-cols
 		flex-direction: column
-		> [class^='wk-col-']
+		> [class*='wk-col-'] 
 			width: 100%
 
 @media ( max-width: $mobile-xs )
@@ -90,7 +92,7 @@ $tablet: 415px;
 	.wk-cols-14 .wk-cols-te,
 	.wk-cols-sys-13 .wk-cols-te
 		flex-direction: column
-		> [class^='wk-col-']
+		> [class*="wk-col-"]
 			width: 100%
 
 	// Mobile equals
@@ -99,7 +101,7 @@ $tablet: 415px;
 	.wk-cols-12 .wk-cols-me,
 	.wk-cols-14 .wk-cols-me,
 	.wk-cols-16 .wk-cols-me
-		> [class^="wk-col-"]
+		> [class*="wk-col-"]
 			width: 50%
 
 @media ( min-width: $desktop )
@@ -629,7 +631,7 @@ $tablet: 415px;
 	.wk-cols-12 .wk-cols-te,
 	.wk-cols-14 .wk-cols-te,
 	.wk-cols-16 .wk-cols-te
-		> [class^="wk-col-"]
+		> [class*="wk-col-"]
 			width: 50%
 
 .wk-cols-m,
@@ -759,13 +761,13 @@ $tablet: 415px;
 @media ( max-width: $mobile-xs )
 	.no-flexbox .wk-cols-m,
 	.no-flexbox .wk-cols-me
-		[class^="wk-col-"],
+		[class*="wk-col-"],
 		.wk-col
 			float: left
 
 @media ( min-width: $tablet )
 	.no-flexbox
-		[class^="wk-col-"],
+		[class*="wk-col-"],
 		.wk-col
 			float: left
 
@@ -782,14 +784,20 @@ $tablet: 415px;
 		.wk-cols-12 .wk-cols-te,
 		.wk-cols-14 .wk-cols-te,
 		.wk-cols-16 .wk-cols-te
-			> [class^="wk-col-"]
+			> [class*="wk-col-"]
 				float: none
 
 .no-flexbox
-	[class^="wk-cols"]
+	[class*="wk-cols"]
 		&:after
 			content: ""
 			display: table
 			clear: both
  
 
+/*========== Col Padding =========*/
+
+@for $i from 1 through 200
+	.wk-col-padding-#{$i} [class*="wk-col-"],
+	.wk-col-padding-#{$i} .wk-col
+		padding: #{$i}px

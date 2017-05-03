@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
   </head>
-  <body class="wk-wrap-956">
+  <body class="wk-wrap-1100 wk-col-padding-20">
     <div id="wraper">
       <header class="wk-section wk-flex wk-flex-align-center wk-text-center" id="header">
         <div class="wk-section-wrap"><img width="60" src="img/wpkit-logo-symbol.svg">
@@ -56,7 +56,7 @@
               <section class="wk-section page" id="only-device">
                 <div class="wk-section-wrap">
                   <h1>Solo en Desktop, Móvil, Tablet y Móvil xs</h1>
-                  <p>Las clases <mark>wk-d</mark> <mark>wk-m</mark> <mark>wk-t</mark> y <mark>wk-xs</mark> muestran contenidos para dispositivos específicos.</p>
+                  <p>Las clases <mark>wk-d</mark> <mark>wk-m</mark> <mark>wk-t</mark> y <mark>wk-m-xs</mark> muestran contenidos para dispositivos específicos.</p>
                   <pre class="prettyprint"><code>	&lt;div class=&quot;wk-d&quot;&gt;
 		&lt;!--Solo aparecerá en desktop (mayor a 771px) --&gt;
 	&lt;/div&gt;
@@ -95,7 +95,7 @@
                   <p> 
                     Cada porción del layout podrá incluirse en un contenedor con la clase <mark>wk-section</mark> esta por si sola no aplica ninguna propiedad al contenido
                     pero prepara el mismo para ser contenido en una envolvente con ancho limitado especificanto un contenedor hijo <mark>wk-section-wrap</mark>. Será necesario
-                    definir antes el ancho de este contenedor mediante la clase en body <mark>wk-wrap-($width)</mark> donde $width = 700px a 1600px siendo posible especificar
+                    definir antes el ancho de este contenedor mediante la clase en body <mark>wk-wrap-($width)</mark> donde $width = 700px a 1900px siendo posible especificar
                     unicamente medidas pares p.ej. 702, 704, 706... 1598, etc.
                   </p>
                   <pre class="prettyprint"><code>	&lt;div class=&quot;wk-section&quot;&gt;
@@ -1033,6 +1033,18 @@
                 </div>
               </section>
             </article>
+          </div>
+        </div>
+        <div class="wk-section">
+          <div class="wk-section-wrap">
+            <p>Este contenido tiene el wrap del body</p>
+            <div class="wk-wrap-700">
+              <div class="wk-section">
+                <div class="wk-section-wrap">
+                  <p>Este contenido tiene un wrap a 700 dentro de otro wrap</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>

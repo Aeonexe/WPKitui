@@ -16,7 +16,7 @@ html(srvr="Alumin")
 		script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
 		//- link(rel="stylesheet" href="assets/prismjs/prism.css")
 		//- script(src="assets/prismjs/prism.js") 
-	body.wk-wrap-956
+	body.wk-wrap-1100.wk-col-padding-20
 		#wraper
 
 			//-
@@ -78,7 +78,7 @@ html(srvr="Alumin")
 								.wk-section-wrap
 									h1 Solo en Desktop, Móvil, Tablet y Móvil xs
 									p
-										| Las clases <mark>wk-d</mark> <mark>wk-m</mark> <mark>wk-t</mark> y <mark>wk-xs</mark> muestran contenidos para dispositivos específicos.
+										| Las clases <mark>wk-d</mark> <mark>wk-m</mark> <mark>wk-t</mark> y <mark>wk-m-xs</mark> muestran contenidos para dispositivos específicos.
 
 									pre.prettyprint
 										code
@@ -113,7 +113,7 @@ html(srvr="Alumin")
 									p 
 										| Cada porción del layout podrá incluirse en un contenedor con la clase <mark>wk-section</mark> esta por si sola no aplica ninguna propiedad al contenido
 										| pero prepara el mismo para ser contenido en una envolvente con ancho limitado especificanto un contenedor hijo <mark>wk-section-wrap</mark>. Será necesario
-										| definir antes el ancho de este contenedor mediante la clase en body <mark>wk-wrap-($width)</mark> donde $width = 700px a 1600px siendo posible especificar
+										| definir antes el ancho de este contenedor mediante la clase en body <mark>wk-wrap-($width)</mark> donde $width = 700px a 1900px siendo posible especificar
 										| unicamente medidas pares p.ej. 702, 704, 706... 1598, etc.
 
 									pre.prettyprint
@@ -686,6 +686,13 @@ html(srvr="Alumin")
 										- for (n=0; n<16; n++)
 											.wk-col 16e
 
+				.wk-section
+					.wk-section-wrap
+						p Este contenido tiene el wrap del body
+						.wk-wrap-700
+							.wk-section
+								.wk-section-wrap
+									p Este contenido tiene un wrap a 700 dentro de otro wrap
 
 
 

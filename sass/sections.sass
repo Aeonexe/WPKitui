@@ -1,4 +1,4 @@
-[class^="wk-section"]
+[class*="wk-section"]
 	margin:
 		left: auto
 		right: auto
@@ -9,8 +9,8 @@
 .wk-section-wrap
 	width: 100%
 
-@for $i from 700 through 1600
+@for $i from 700 through 1900
 	@if $i % 2 == 0
-		.wk-wrap-#{$i}
-			.wk-section-wrap
+		.wk-wrap-#{$i} .wk-section-wrap,
+		.wk-wrap-#{$i} > .wk-section > .wk-section-wrap,
 				max-width: #{$i}px
