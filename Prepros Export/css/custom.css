@@ -1,0 +1,52 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #737373;
+}
+
+mark {
+  background-color: gold;
+  color: #3c3c3c;
+  padding: 0px 4px;
+}
+
+main article [class*="wk-col-"],
+main article .wk-col {
+  background-color: #dcdcdc;
+  box-sizing: border-box;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-left: solid;
+  border-left-width: 1px;
+  border-color: white;
+  color: #484848;
+  font-size: 12px;
+  padding: 6px 0;
+}
+
+/*========== Header ==========*/
+#header {
+  height: 100vh;
+  background-color: #23222a;
+  color: white;
+  /*
+		> *
+			display: table-cell
+			vertical-align: middle
+			text-align: center */
+}
+
+/*========== Page ==========*/
+.page {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#why-to-use.page {
+  background-color: #ff6666;
+  background-color: rebeccapurple;
+  color: white;
+}
+
+/*# sourceMappingURL=custom.css.map */

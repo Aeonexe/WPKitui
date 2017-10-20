@@ -1,0 +1,188 @@
+$maxsize: 300
+
+.wk-margin-auto,
+[data-layout~="margin(auto)"]
+	margin: auto
+
+.wk-margin-0-auto,
+[data-layout~="margin(0-auto)"]
+	margin: auto
+
+.wk-children-margin-auto,
+[data-layout~="children-margin(auto)"]
+	margin: auto
+
+.wk-children-margin-0-auto,
+[data-layout~="children-margin(0-auto)"]
+	margin: auto
+
+
+@for $i from 0 through $maxsize
+      .wk-margin-#{$i},
+      [data-layout~="margin(#{$i}px)"],
+      .wk-children-margin-#{$i} > *,
+      [data-layout~="children-margin(#{$i}px)"] > *
+            margin: #{$i}px
+
+      .wk-margin-top-#{$i},
+      [data-layout~="margin-top(#{$i}px)"],
+      .wk-children-margin-top-#{$i} > *,
+      [data-layout~="children-margin-top(#{$i}px)"] > *
+            margin-top: #{$i}px
+
+      .wk-margin-right-#{$i},
+      [data-layout~="margin-right(#{$i}px)"],
+      .wk-children-margin-right-#{$i} > *,
+      [data-layout~="children-margin-right(#{$i}px)"] > *
+            margin-right: #{$i}px
+
+      .wk-margin-bottom-#{$i},
+      [data-layout~="margin-bottom(#{$i}px)"],
+      .wk-children-margin-bottom-#{$i} > *,
+      [data-layout~="children-margin-bottom(#{$i}px)"] > *
+            margin-bottom: #{$i}px
+
+      .wk-margin-left-#{$i},
+      [data-layout~="margin-left(#{$i}px)"],
+      .wk-children-margin-left-#{$i} > *,
+      [data-layout~="children-margin-left(#{$i}px)"] > *
+            margin-left: #{$i}px
+
+      .wk-margin-y-#{$i},
+      [data-layout~="margin-y(#{$i}px)"],
+      .wk-children-margin-y-#{$i} > *,
+      [data-layout~="children-margin-y(#{$i}px)"] > *
+            margin-top: #{$i}px
+            margin-bottom: #{$i}px
+
+      .wk-margin-x-#{$i},
+      [data-layout~="margin-x(#{$i}px)"],
+      .wk-children-margin-x-#{$i} > *,
+      [data-layout~="children-margin-x(#{$i}px)"] > *
+            margin-left: #{$i}px
+            margin-right: #{$i}px
+
+
+@media #{$onlyMobile}
+	.wk-m-margin-auto,
+	[data-layout-mobile~="margin(auto)"]
+		margin: auto
+
+	.wk-m-margin-0-auto,
+	[data-layout-mobile~="margin(0-auto)"]
+		margin: auto
+
+	.wk-m-children-margin-auto,
+	[data-layout-mobile~="children-margin(auto)"]
+		margin: auto
+
+	.wk-m-children-margin-0-auto,
+	[data-layout-mobile~="children-margin(0-auto)"]
+		margin: auto
+
+	@for $i from 0 through $maxsize
+	      .wk-m-margin-#{$i},
+	      [data-layout-mobile~="margin(#{$i}px)"],
+	      .wk-m-children-margin-#{$i} > *,
+	      [data-layout-mobile~="children-margin(#{$i}px)"] > *
+	            margin: #{$i}px
+
+	      .wk-m-margin-top-#{$i},
+	      [data-layout-mobile~="margin-top(#{$i}px)"],
+	      .wk-m-children-margin-top-#{$i} > *,
+	      [data-layout-mobile~="children-margin-top(#{$i}px)"] > *
+	            margin-top: #{$i}px
+
+	      .wk-m-margin-right-#{$i},
+	      [data-layout-mobile~="margin-right(#{$i}px)"],
+	      .wk-m-children-margin-right-#{$i} > *,
+	      [data-layout-mobile~="children-margin-right(#{$i}px)"] > *
+	            margin-right: #{$i}px
+
+	      .wk-m-margin-bottom-#{$i},
+	      [data-layout-mobile~="margin-bottom(#{$i}px)"],
+	      .wk-m-children-margin-bottom-#{$i} > *,
+	      [data-layout-mobile~="children-margin-bottom(#{$i}px)"] > *
+	            margin-bottom: #{$i}px
+
+	      .wk-m-margin-left-#{$i},
+	      [data-layout-mobile~="margin-left(#{$i}px)"],
+	      .wk-m-children-margin-left-#{$i} > *,
+	      [data-layout-mobile~="children-margin-left(#{$i}px)"] > *
+	            margin-left: #{$i}px
+
+	      .wk-m-margin-y-#{$i},
+	      [data-layout-mobile~="margin-y(#{$i}px)"],
+	      .wk-m-children-margin-y-#{$i} > *,
+	      [data-layout-mobile~="children-margin-y(#{$i}px)"] > *
+	            margin-top: #{$i}px
+	            margin-bottom: #{$i}px
+
+	      .wk-m-margin-x-#{$i},
+	      [data-layout-mobile~="margin-x(#{$i}px)"],
+	      .wk-m-children-margin-x-#{$i} > *,
+	      [data-layout-mobile~="children-margin-x(#{$i}px)"] > *
+	            margin-left: #{$i}px
+	            margin-right: #{$i}px
+
+@media #{$onlyDesktop}
+	.wk-d-margin-auto,
+	[data-layout-desktop~="margin(auto)"]
+		margin: auto
+
+	.wk-d-margin-0-auto,
+	[data-layout-desktop~="margin(0-auto)"]
+		margin: auto
+
+	.wk-d-children-margin-auto,
+	[data-layout-desktop~="children-margin(auto)"]
+		margin: auto
+
+	.wk-d-children-margin-0-auto,
+	[data-layout-desktop~="children-margin(0-auto)"]
+		margin: auto
+
+	@for $i from 0 through $maxsize
+	      .wk-d-margin-#{$i},
+	      [data-layout-desktop~="margin(#{$i}px)"],
+	      .wk-d-children-margin-#{$i} > *,
+	      [data-layout-desktop~="children-margin(#{$i}px)"] > *
+	            margin: #{$i}px
+
+	      .wk-d-margin-top-#{$i},
+	      [data-layout-desktop~="margin-top(#{$i}px)"],
+	      .wk-d-children-margin-top-#{$i} > *,
+	      [data-layout-desktop~="children-margin-top(#{$i}px)"] > *
+	            margin-top: #{$i}px
+
+	      .wk-d-margin-right-#{$i},
+	      [data-layout-desktop~="margin-right(#{$i}px)"],
+	      .wk-d-children-margin-right-#{$i} > *,
+	      [data-layout-desktop~="children-margin-right(#{$i}px)"] > *
+	            margin-right: #{$i}px
+
+	      .wk-d-margin-bottom-#{$i},
+	      [data-layout-desktop~="margin-bottom(#{$i}px)"],
+	      .wk-d-children-margin-bottom-#{$i} > *,
+	      [data-layout-desktop~="children-margin-bottom(#{$i}px)"] > *
+	            margin-bottom: #{$i}px
+
+	      .wk-d-margin-left-#{$i},
+	      [data-layout-desktop~="margin-left(#{$i}px)"],
+	      .wk-d-children-margin-left-#{$i} > *,
+	      [data-layout-desktop~="children-margin-left(#{$i}px)"] > *
+	            margin-left: #{$i}px
+
+	      .wk-d-margin-y-#{$i},
+	      [data-layout-desktop~="margin-y(#{$i}px)"],
+	      .wk-d-children-margin-y-#{$i} > *,
+	      [data-layout-desktop~="children-margin-y(#{$i}px)"] > *
+	            margin-top: #{$i}px
+	            margin-bottom: #{$i}px
+
+	      .wk-d-margin-x-#{$i},
+	      [data-layout-desktop~="margin-x(#{$i}px)"],
+	      .wk-d-children-margin-x-#{$i} > *,
+	      [data-layout-desktop~="children-margin-x(#{$i}px)"] > *
+	            margin-left: #{$i}px
+	            margin-right: #{$i}px

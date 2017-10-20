@@ -1,75 +1,344 @@
 @import variables
 
-$v: n;
-
-* 
+*
 	box-sizing: border-box
 
 body
 	margin: 0
 	padding: 0
 
-/*========== Mobile & Desktop only =========*/
-
-// Solo desktop
-@media ( min-width: $desktop)
-	.wk-m, 
-	.wk-t, 
-	.wk-xs
-		display: none
-
-// Solo móvil
-@media ( max-width: $mobile )
-	.wk-d
-		display: none
-
-// Solo móvil xs
-@media ( max-width: $mobile-xs )
-	.wk-t
-		display: none
-	
-// No móvil xs 
-@media ( min-width: $tablet )
-	.wk-xs
-		display: none
-
-/*========== Menu =========*/
+/*========== Sections =========*/
 
 @import sections
-
-$v: n; 
 
 /*========== Cols =========*/
 
 @import cols
 
-$v: n;
-
 /*========== Menu =========*/
 
 @import menu
 
-$v: n;
-
-/*========== Display =========*/ 
+/*========== Display =========*/
 
 
 @import display
-
-$v: n;
 
 /*========== Text =========*/
 
 @import text
 
-$v: n;
+/*========== Margins =========*/
+
+@import margins
+
+/*========== Paddings =========*/
+
+@import paddings
+
+/*========== Imágenes =========*/
+
+.wk-img-responsive,
+.wk-img-full-width
+	width: 100%
+	height: auto
+
+/*========== Botónes =========*/
+
+.wk-button,
+.wk-button-o
+	font-family: inherit
+	font-size: inherit
+	color: inherit
+	text-decoration: inherit
+	padding: 6px 12px
+	margin: 12px 6px
+	background-color: gainsboro
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.25)
+	border: 0
+	border-radius: 3px
+	cursor: pointer
+	transition: all .25s linear
+	&:hover
+		color: white
+		background-color: dodgerblue
+
+.wk-button,
+.wk-button-o
+	.icon
+        font-size: 12px
+        line-height: 2
+        opacity: .5
+
+.wk-button-o
+    background-color: initial
+    border: 1px solid gainsboro
+    box-shadow: initial
+    &:hover
+        color: inherit
+        background-color: initial
+        border: 1px solid gray
+        box-shadow: initial
+
+/*========== Inputs =========*/
+
+input[type="text"],
+input[type="number"],
+input[type="password"]
+	height: 24px
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+textarea
+	padding: 0px 6px
+	margin: 12px 0
+	border-color: gainsboro
+	border-width: 1px
+	border-style: solid
+	border-radius: 2px
+
+textarea
+	display: block
+
+/*========== switches =========*/
+
+.wk-checkbox,
+.wk-radio
+    display: none !important
+
+.wk-checkbox-label,
+.wk-radio-label
+    background-color: transparent
+    border-color: rgba(0, 0, 0, 0.17)
+    border-style: solid
+    border-width: 1px
+    border-radius: 0px
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    padding: 0px 2px
+    display: inline-flex
+    align-items: center
+    justify-content: flex-start
+    transition: .25s linear
+
+.wk-checkbox-label
+    width: 32px
+    height: 16px
+
+.wk-radio-label
+    width: 14px
+    height: 16px
+    border-width: 1px
+    justify-content: center
 
 
+.wk-checkbox + label i,
+.wk-radio + label i
+    background-color: #adadad
+    display: inline-block
+    border-radius: 2px
+    transition: .25s linear
 
-////////////////////
-	// $wk-col-slug: wk-col; 
+.wk-checkbox + label i
+    width: 14px
+    height: 14px
 
-	//@for $i from 1 through 12
-	//	.wk-col-#{$i}
-	//		width: 300px + $i
+.wk-radio + label i
+    width: 9px
+    height: 9px
 
+.wk-checkbox:checked + label i,
+.wk-radio:checked + label i
+    background-color: dodgerblue
+
+
+.wk-checkbox:checked + label i
+    transform: translateX(18px)
+
+.no-flexbox .wk-checkbox:checked + label i
+    left: 20px
+
+.no-flexbox .wk-checkbox-label,
+.no-flexbox .wk-radio-label
+    position: relative
+
+.no-flexbox .wk-checkbox + label i,
+.no-flexbox .wk-radio + label i
+    position: absolute
+    left: 2px
+    top: 1px
+
+.no-flexbox .wk-radio-label i
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+/*========== Tabs =========*/
+
+/* Tabs list*/
+
+.wk-tabs-content-top,
+.wk-tabs-content-bottom,
+.wk-tabs-content-right,
+.wk-tabs-content-left
+	clear: both
+
+  /* Left align*/
+.wk-tabs-content-left .wk-tabs-list
+	float: left
+	width: 120px
+
+.wk-tabs-content-left .wk-tabgroup
+	float: right
+	width: calc(100% - 120px)
+
+/* Right align*/
+.wk-tabs-content-right .wk-tabs-list
+	float: right
+	width: 120px
+
+.wk-tabs-content-right .wk-tabgroup
+	float: left
+	width: calc(100% - 120px)
+
+/* Top align */
+.wk-tabs-content-top .wk-tabs-list li
+	display: inline-block
+
+.wk-tabs-list
+	margin: 0
+	background-color: rgba(0, 0, 0, 0.1)
+
+.wk-tabgroup
+	min-height: 300px
+
+.wk-tabs-list li
+	margin: 0
+
+.wk-tabs-list li a
+	display: block
+	padding: 12px
+	color: #888
+	text-decoration: none
+	-webkit-transition: all .15s linear
+	transition: all .15s linear
+
+.wk-tabs-list li:not(:last-child)
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18)
+
+.wk-tabs-list li a.active
+	background-color: white
+
+.wk-tabs-list li a:focus
+	box-shadow: none
+
+/* Tabs */
+
+.wk-tabs
+	width: 100%
+.wk-tab-rows
+	background-color: white
+	margin-bottom: 2px
+
+.wk-tab-header
+	min-height: 44px
+	box-sizing: border-box
+	padding: 12px
+
+.wk-tab-header h2
+	padding: 0 !important
+
+.wk-tab-header .description
+	margin: 6px 0
+
+.wk-tab-row
+	margin-bottom: 2px
+
+.wk-tab-row.wk-tab-row-header
+	background: #f4f4f4
+
+.wk-tab-data
+	display: table-cell
+	width: 50%
+	padding: 22px 12px;
+	vertical-align: top
+
+.wk-tab-row .wk-tab-data
+	border-bottom: 1px solid #eee
+
+.wk-tab:last-child .wk-tab-row:last-child .wk-tab-data
+	border: none
+.wk-tab-data:first-child
+	border-color: white !important
+	width: 1%
+	min-width: 200px
+
+.wk-tab-data:first-child .description
+	font-size: 12px
+	font-style: inherit
+	opacity: .75
+
+// .wk-tab-data:last-child
+// 	width: 50%
+// 	background-color: #ffffff
+
+.wk-tabs input[type="text"],
+.wk-tabs input[type="number"]
+	width: 100%
+
+.wk-tabs input[type="radio"]
+	width: initial
+
+.wk-tabs select
+	height: initial
+
+.wk-tabs input
+	box-shadow: none
+
+.wk-col-data textarea,
+.wk-col-data input[type="text"]
+	width: 100% !important
+
+.wk-tabs i.description
+	vertical-align: middle
+	margin-right: 6px
+
+@media ( max-width: $mobile )
+	.wk-col-data
+		display: block
+
+.wk-col-data
+	padding: 22px 12px
+
+.wk-col-data:first-child
+	background-color: rgba(0, 0, 0, 0.1)
+	max-width: 240px
+
+/*========== Mobile & Desktop only =========*/
+
+// Solo desktop
+@media ( min-width: $desktop)
+	.wk-m,
+	.wk-t,
+	.wk-xs
+		display: none !important
+
+// Solo móvil
+@media ( max-width: $mobile )
+	.wk-d
+		display: none !important
+
+// Solo móvil xs
+@media ( max-width: $mobile-xs )
+	.wk-t
+		display: none !important
+
+// No móvil xs
+@media ( min-width: $tablet )
+	.wk-xs
+		display: none !important

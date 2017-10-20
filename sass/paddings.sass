@@ -1,0 +1,139 @@
+$maxsize: 300
+
+@for $i from 0 through $maxsize
+      .wk-padding-#{$i},
+      [data-layout~="padding(#{$i}px)"],
+      .wk-children-padding-#{$i} > *,
+      [data-layout~="children-padding(#{$i}px)"] > *
+            padding: #{$i}px
+
+      .wk-padding-top-#{$i},
+      [data-layout~="padding-top(#{$i}px)"],
+      .wk-children-padding-top-#{$i} > *,
+      [data-layout~="children-padding-top(#{$i}px)"] > *
+            padding-top: #{$i}px
+
+      .wk-padding-right-#{$i},
+      [data-layout~="padding-right(#{$i}px)"],
+      .wk-children-padding-right-#{$i} > *,
+      [data-layout~="children-padding-right(#{$i}px)"] > *
+            padding-right: #{$i}px
+
+      .wk-padding-bottom-#{$i},
+      [data-layout~="padding-bottom(#{$i}px)"],
+      .wk-children-padding-bottom-#{$i} > *,
+      [data-layout~="children-padding-bottom(#{$i}px)"] > *
+            padding-bottom: #{$i}px
+
+      .wk-padding-left-#{$i},
+      [data-layout~="padding-left(#{$i}px)"],
+      .wk-children-padding-left-#{$i} > *,
+      [data-layout~="children-padding-left(#{$i}px)"] > *
+            padding-left: #{$i}px
+
+      .wk-padding-y-#{$i},
+      [data-layout~="padding-y(#{$i}px)"],
+      .wk-children-padding-y-#{$i} > *,
+      [data-layout~="children-padding-y(#{$i}px)"] > *
+            padding-top: #{$i}px
+            padding-bottom: #{$i}px
+
+      .wk-padding-x-#{$i},
+      [data-layout~="padding-x(#{$i}px)"],
+      .wk-children-padding-x-#{$i} > *,
+      [data-layout~="children-padding-x(#{$i}px)"] > *
+            padding-left: #{$i}px
+            padding-right: #{$i}px
+
+
+@media #{$onlyMobile}
+	@for $i from 0 through $maxsize
+	      .wk-m-mpadding-#{$i},
+	      [data-layout-mobile~="padding(#{$i}px)"],
+	      .wk-m-children-padding-#{$i} > *,
+	      [data-layout-mobile~="children-padding(#{$i}px)"] > *
+	            padding: #{$i}px
+
+	      .wk-m-padding-top-#{$i},
+	      [data-layout-mobile~="padding-top(#{$i}px)"],
+	      .wk-m-children-padding-top-#{$i} > *,
+	      [data-layout-mobile~="children-padding-top(#{$i}px)"] > *
+	            padding-top: #{$i}px
+
+	      .wk-m-padding-right-#{$i},
+	      [data-layout-mobile~="padding-right(#{$i}px)"],
+	      .wk-m-children-padding-right-#{$i} > *,
+	      [data-layout-mobile~="children-padding-right(#{$i}px)"] > *
+	            padding-right: #{$i}px
+
+	      .wk-m-padding-bottom-#{$i},
+	      [data-layout-mobile~="padding-bottom(#{$i}px)"],
+	      .wk-m-children-padding-bottom-#{$i} > *,
+	      [data-layout-mobile~="children-padding-bottom(#{$i}px)"] > *
+	            padding-bottom: #{$i}px
+
+	      .wk-m-padding-left-#{$i},
+	      [data-layout-mobile~="padding-left(#{$i}px)"],
+	      .wk-m-children-padding-left-#{$i} > *,
+	      [data-layout-mobile~="children-padding-left(#{$i}px)"] > *
+	            padding-left: #{$i}px
+
+	      .wk-m-padding-y-#{$i},
+	      [data-layout-mobile~="padding-y(#{$i}px)"],
+	      .wk-m-children-padding-y-#{$i} > *,
+	      [data-layout-mobile~="children-padding-y(#{$i}px)"] > *
+	            padding-top: #{$i}px
+	            padding-bottom: #{$i}px
+
+	      .wk-m-padding-x-#{$i},
+	      [data-layout-mobile~="padding-x(#{$i}px)"],
+	      .wk-m-children-padding-x-#{$i} > *,
+	      [data-layout-mobile~="children-padding-x(#{$i}px)"] > *
+	            padding-left: #{$i}px
+	            padding-right: #{$i}px
+
+@media #{$onlyDesktop}
+	@for $i from 0 through $maxsize
+	      .wk-d-mpadding-#{$i},
+	      [data-layout-desktop~="padding(#{$i}px)"],
+	      .wk-m-children-padding-#{$i} > *,
+	      [data-layout-desktop~="children-padding(#{$i}px)"] > *
+	            padding: #{$i}px
+
+	      .wk-d-padding-top-#{$i},
+	      [data-layout-desktop~="padding-top(#{$i}px)"],
+	      .wk-m-children-padding-top-#{$i} > *,
+	      [data-layout-desktop~="children-padding-top(#{$i}px)"] > *
+	            padding-top: #{$i}px
+
+	      .wk-d-padding-right-#{$i},
+	      [data-layout-desktop~="padding-right(#{$i}px)"],
+	      .wk-m-children-padding-right-#{$i} > *,
+	      [data-layout-desktop~="children-padding-right(#{$i}px)"] > *
+	            padding-right: #{$i}px
+
+	      .wk-d-padding-bottom-#{$i},
+	      [data-layout-desktop~="padding-bottom(#{$i}px)"],
+	      .wk-m-children-padding-bottom-#{$i} > *,
+	      [data-layout-desktop~="children-padding-bottom(#{$i}px)"] > *
+	            padding-bottom: #{$i}px
+
+	      .wk-d-padding-left-#{$i},
+	      [data-layout-desktop~="padding-left(#{$i}px)"],
+	      .wk-m-children-padding-left-#{$i} > *,
+	      [data-layout-desktop~="children-padding-left(#{$i}px)"] > *
+	            padding-left: #{$i}px
+
+	      .wk-d-padding-y-#{$i},
+	      [data-layout-desktop~="padding-y(#{$i}px)"],
+	      .wk-m-children-padding-y-#{$i} > *,
+	      [data-layout~="children-padding-y(#{$i}px)"] > *
+	            padding-top: #{$i}px
+	            padding-bottom: #{$i}px
+
+	      .wk-d-padding-x-#{$i},
+	      [data-layout-desktop~="padding-x(#{$i}px)"],
+	      .wk-m-children-padding-x-#{$i} > *,
+	      [data-layout-desktop~="children-padding-x(#{$i}px)"] > *
+	            padding-left: #{$i}px
+	            padding-right: #{$i}px

@@ -15,7 +15,7 @@ html(srvr="Alumin")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
 		script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
 		//- link(rel="stylesheet" href="assets/prismjs/prism.css")
-		//- script(src="assets/prismjs/prism.js") 
+		//- script(src="assets/prismjs/prism.js")
 	body.wk-wrap-1100.wk-col-padding-20
 		#wraper
 
@@ -40,662 +40,623 @@ html(srvr="Alumin")
 
 
 			main
-				.wk-cols
-					//-
-						.wk-col-2.wk-d
-							aside
-								h1 Contents
-
-					.wk-col-10
-						article
-							section#why-to-use.wk-section.page.wk-flex.wk-flex-align-center.wk-flex-justify-center
-								.wk-section-wrap
-									h1 Por qué deberias usarlo
-									ol
-										li Simple de usar
-										li Compatible con IE9
-										li Puedes seleccionar entre 4 sistemas de columnas, 8, 12 (default), 14 y 16
-									p Empezar
-
-							section#headings.wk-section.page
-								.wk-section-wrap
-
-									h1 Headings
-									p
-										| Un diseño consistente mantendrá las cosas simples y ordenadas, es por eso que WPKit ui incorpora solo 3 tamaños de headers en porcentajes sobre 
-										| el tamaño de fuente principal, al 250%, 200% y al 150%. para headings h1, h2 y h3. El resto, h4, h5 y h6 al 100%, esto quiere decir que mantendrán el mismo 
-										| tamaño que el tamaño de fuente principal, con peso de fuente light (300), regular(400) y bold(700) respectivamente.
-									
-									h1 Heading <span style="font-size: 13px"><mark>&lt;h1&gt;</mark> 250%</span>
-									h2 Heading <span style="font-size: 13px"><mark>&lt;h2&gt;</mark> 200%</span>
-									h3 Heading <span style="font-size: 13px"><mark>&lt;h3&gt;</mark> 150%</span>
-									h4 Heading <span style="font-size: 13px"><mark>&lt;h4&gt;</mark> 100% light</span>
-									h5 Heading <span style="font-size: 13px"><mark>&lt;h5&gt;</mark> 100% regular</span>
-									h6 Heading <span style="font-size: 13px"><mark>&lt;h6&gt;</mark> 100% bold</span>
-							
-
-							section#only-device.wk-section.page
-								.wk-section-wrap
-									h1 Solo en Desktop, Móvil, Tablet y Móvil xs
-									p
-										| Las clases <mark>wk-d</mark> <mark>wk-m</mark> <mark>wk-t</mark> y <mark>wk-m-xs</mark> muestran contenidos para dispositivos específicos.
-
-									pre.prettyprint
-										code
-											|	&lt;div class=&quot;wk-d&quot;&gt;
-											|		&lt;!--Solo aparecerá en desktop (mayor a 771px) --&gt;
-											|	&lt;/div&gt;
-											|
-											|
-											|	&lt;div class=&quot;wk-m&quot;&gt;
-											|		&lt;!--Aparecerá en cualquier dispositivo m&oacute;vil (menor a 770px) --&gt;
-											|	&lt;/div&gt;
-											|
-											|
-											|	&lt;div class=&quot;wk-t&quot;&gt;
-											|		&lt;!--Solo aparecerá en tablet (entre 415px y 770px) --&gt;
-											|	&lt;/div&gt;
-											|
-											|
-											|	&lt;div class=&quot;wk-m-xs&quot;&gt;
-											|		&lt;!--Solo aparecerá en dispositivos m&oacute;viles peque&ntilde;os (menor a 414px) --&gt;
-											|	&lt;/div&gt;
-
-									.wk-d: p Este contenido solo aparecerá en desktop
-									.wk-m: p Este contenido aparecerá en cualquier dispositivo móvil
-									.wk-t: p Este contenido solo aparecerá en tablet
-									.wk-m-xs: p Este contenido solo aparecerá en móvil xs
-
-
-							section#wrapper-system.wk-section.page
-								.wk-section-wrap
-									h1 Systema de contenedores
-									p 
-										| Cada porción del layout podrá incluirse en un contenedor con la clase <mark>wk-section</mark> esta por si sola no aplica ninguna propiedad al contenido
-										| pero prepara el mismo para ser contenido en una envolvente con ancho limitado especificanto un contenedor hijo <mark>wk-section-wrap</mark>. Será necesario
-										| definir antes el ancho de este contenedor mediante la clase en body <mark>wk-wrap-($width)</mark> donde $width = 700px a 1900px siendo posible especificar
-										| unicamente medidas pares p.ej. 702, 704, 706... 1598, etc.
-
-									pre.prettyprint
-										code
-											|	&lt;div class=&quot;wk-section&quot;&gt;
-											|		&lt;div class=&quot;wk-section-wrap&quot;&gt;
-											|			&lt;!--Content--&gt;
-											|		&lt;/div&gt;
-											|	&lt;/div&gt;
-											|
-											|
-											|	&lt;!-- wk-wrapp-1100 podr&aacute; contener valores 
-											|	de 700 a 1600 con medidas pares &uacute;nicamente.--&gt;
-											|	&lt;body class=&quot;wk-wrap-1100&quot;&gt;
-											|		&lt;div class=&quot;wk-section&quot;&gt;
-											|			&lt;div class=&quot;wk-section-wrap&quot;&gt;
-											|				&lt;!--Content--&gt;
-											|			&lt;/div&gt;
-											|		&lt;/div&gt;	
-											|	&lt;/body&gt;
-
-							section#cols-system.wk-section.page
-								.wk-section-wrap
-									h1 Sistema de columnas
-									p 
-										| Sin más ni más puedes empezar a utilizar el sistema de columnas especificando un contenedor 
-										| <mark>wk-cols</mark> y contenedores hijos <mark>wk-col</mark>. Es muy simple, "cols" plural para el contenedor, "col" singular para cada columna.
-
-									pre.prettyprint
-										code 
-											| 	&lt;div class=&quot;wk-cols&quot;&gt;
-											|		&lt;div class=&quot;wk-col&quot;&gt;Columna 1&lt;/div&gt;
-											|		&lt;div class=&quot;wk-col&quot;&gt;Columna 2&lt;/div&gt;
-											|	&lt;/div&gt;
-
-									p
-										| Esto hará automáticamente un layout de columnas iguales, no importa cuantas columnas coloques 2 o 100, realmente improbable pero aún así 
-										| todas las columnas tendrán la misma proporción gracias al poder de Flexbox
-									p
-										| ¿Preocupado por la compatibilidad con IE9 o navegadores que no soportan Flexbox?, estas cubierto, WPKit ui cargará estílos soportados por esos navegadores
-										| de forma automática, o si lo prefieres, puedes anular Flexbox en cualquier explorador; simplemente añade la clase <mark>.no-flexbox</mark> a la etiqueta html
-
-							section#cols-modules.wk-section.page
-								.wk-section-wrap
-									h1 Proporción de columnas
-									p
-										| Por default el sistema de columnas es en base a 12 módulos pero es posible <a href="#">cambiarlo a 8, 14 o 16</a>.
-
-									.wk-cols
-										- for ( n=1; n<13; n++ )
-											.wk-col col #{n}
-									
-									p
-										| Para proporcionar las columnas solo añade un sufijo con la proporción que deseas para cada columna p.ej <mark>wk-cols-1</mark> donde "-1" (guion uno) será 
-										| la proporción dentro del sistema reticular
-
-									pre.prettyprint
-										code
-											|   	&lt;!-- Generar&aacute; una columna de 4 m&oacute;dulos y otra de 8--&gt;	
-											|	&lt;div class=&quot;wk-cols&quot;&gt;
-											|		&lt;div class=&quot;wk-col-4&quot;&gt;Columna 1&lt;/div&gt;
-											|		&lt;div class=&quot;wk-col-8&quot;&gt;Columna 2&lt;/div&gt;
-											|	&lt;/div&gt;
-										
-									.cont.wk-text-center(style="background-color: #e6e6e6;")
-										.wk-cols
-											.wk-col-1 .wk-col-1
-											.wk-col-11 .wk-col-11
-
-										.wk-cols
-											.wk-col-2 .wk-col-2
-											.wk-col-10 .wk-col-10
-
-										.wk-cols
-											.wk-col-3 .wk-col-3
-											.wk-col-9 .wk-col-9
-
-										.wk-cols
-											.wk-col-4 .wk-col-4
-											.wk-col-8 .wk-col-8
-
-										.wk-cols
-											.wk-col-5 .wk-col-5
-											.wk-col-7 .wk-col-7
-
-										.wk-cols
-											.wk-col-6 .wk-col-6
-											.wk-col-6 .wk-col-6
-
-										.wk-cols
-											.wk-col-7 .wk-col-7
-											.wk-col-5 .wk-col-5
-
-										.wk-cols
-											.wk-col-8 .wk-col-8
-											.wk-col-4 .wk-col-4
-
-										.wk-cols
-											.wk-col-9 .wk-col-9
-											.wk-col-3 .wk-col-3
-
-										.wk-cols
-											.wk-col-10 .wk-col-10
-											.wk-col-2 .wk-col-2
-
-										.wk-cols
-											.wk-col-11 .wk-col-11
-											.wk-col-1 .wk-col-1
-
-							section#change-cols-system.wk-section.page
-								.wk-section-wrap
-									h1 Cambiar el sistema de columnas
-									p 
-										| WPKit ui te provee con 4 sistemas de columnas 8, 12, 14 y 16, el default es 12 ya que es el más común así que no será necesario hacer alguna especificación
-										| para trabajar con él. Por el contrario para activar el resto de los sistemas solo deberás añadir la clase <mark>.wk-cols-8</mark> 
-										| <mark>.wk-cols-14</mark> y <mark>.wk-cols-16</mark> respectivamente a un contendor para <mark>.wk-cols</mark> de la siguiente forma:
-
-									pre.prettyprint
-										code
-											|	&lt;div class=&quot;wk-cols-8&quot;&gt;
-											|		&lt;div class=&quot;wk-cols&quot;&gt;
-											|			&lt;div class=&quot;wk-col-2&quot;&gt;Columna 1&lt;/div&gt;
-											|			&lt;div class=&quot;wk-col-4&quot;&gt;Columna 2&lt;/div&gt;
-											|			&lt;div class=&quot;wk-col-2&quot;&gt;Columna 3&lt;/div&gt;
-											|		&lt;/div&gt;
-											|	&lt;/div&gt;
-
-									h1 Cambiar el sistema de columnas de forma <strong>global</strong>
-									p
-										| El método anterior activara el sistema de columnas especificado en cada bloque de columnas, lo que puede resultar en una tarea tediosa y complicada
-										| si deseas aplicar determinado sistema de columnas a todo el layout.
-									p 	
-										|Para aplicar cualquiera de los sistemas de columnas de forma global solo
-										| deberas añadir la clase <mark>.wk-cols-8</mark> <mark>.wk-cols-14</mark> o <mark>.wk-cols-16</mark> a un contenedor global como la etiqueta de body o html.
-										| Esto heredará el sistema a todos los bloques de columnas sin importar su ubiación en el layout.
-
-									pre.prettyprint
-										code
-											|	&lt;!-- Al aplicar la clase wk-cols-8 a la etiqueta &quot;body&quot;, todos los 
-											|	contenedores wk-cols heredan las clases que construyen las columnas--&gt;	
-											|	
-											|	&lt;body class=&quot;wk-cols-8&quot;&gt;
-											|		&lt;header&gt;
-											|			&lt;h1&gt;Whatever title&lt;/h1&gt;
-											|			&lt;section id=&quot;whichever-section&quot;&gt;
-											|				&lt;!-- Heredará el sistema de columnas de 8 módulos--&gt;
-											|				&lt;div class=&quot;wk-cols&quot;&gt;
-											|					&lt;div class=&quot;wk-col-2&quot;&gt;Columna 1&lt;/div&gt;
-											|					&lt;div class=&quot;wk-col-6&quot;&gt;Columna 2&lt;/div&gt;
-											|				&lt;/div&gt;
-											|			&lt;/section&gt;
-											|		&lt;/header&gt;
-											|		&lt;!-- Heredará el sistema de columnas de 8 módulos--&gt;
-											|		&lt;div class=&quot;wk-cols&quot;&gt;
-											|			&lt;div class=&quot;wk-col-1&quot;&gt;Columna 1&lt;/div&gt;
-											|			&lt;div class=&quot;wk-col-6&quot;&gt;Columna 2&lt;/div&gt;
-											|			&lt;div class=&quot;wk-col-1&quot;&gt;Columna 3&lt;/div&gt;
-											|		&lt;/div&gt;
-											|	&lt;/body&gt;
-						
-							section#more-cols.wk-section.page
-								.wk-section-wrap
-
-									h1 Cols n cols
-
-									h3 wk-cols / No Flexbox Todos los items se apilan en móvil
-									.wk-cols(style="background-color: gold")
-										- for ( n=1; n<13; n++ )
-											.wk-col col #{n}
-
-									h3 wk-cols-t / No Flexbox permanecerán en tablet solo se apilarán en móvil xss
-									.wk-cols-t(style="background-color: tomato")
-										- for ( n=1; n<13; n++ )
-											.wk-col col #{n}
-
-									h3 wk-cols-m / No Flexbox Nunca se apilarán
-									.wk-cols-m(style="background-color: dodgerblue")
-										- for ( n=1; n<13; n++ )
-											.wk-col col #{n}
-
-									h3 wk-cols / wk-cols-1 - Se apilarán en todos los dispositivos móviles
-									.wk-cols(style="background-color: aquamarine")
-										- for ( n=1; n<13; n++ )
-											.wk-col-1 col #{n}
-									h3 WK Cols 8
-									.wk-cols-8(style="background-color: mediumpurple;")
-										.wk-cols-t
-											.wk-col-1 1 t
-											.wk-col-7 7 t
-
-										.wk-cols-te
-											.wk-col-2 2 te
-											.wk-col-6 6 te
-
-										.wk-cols-m
-											.wk-col-3 3 m
-											.wk-col-5 5 m
-
-										.wk-cols
-											.wk-col-4 4 
-											.wk-col-4 4 
-
-										.wk-cols-me
-											.wk-col-5 5 me
-											.wk-col-3 3 me
-
-										.wk-cols
-											.wk-col-6 6
-											.wk-col-2 2
-
-										.wk-cols
-											.wk-col-7 7
-											.wk-col-1 1
-
-
-									h3 WK Cols 12
-									.cont(style="background-color: wheat;")
-										.wk-cols-t
-											.wk-col-1 1 t
-											.wk-col-11 11 t
-
-										.wk-cols-te
-											.wk-col-2 2 te
-											.wk-col-10 10 te
-
-										.wk-cols-m
-											.wk-col-3 3 m
-											.wk-col-9 9 m
-
-										.wk-cols-me
-											.wk-col-4 4 me
-											.wk-col-8 8 me
-
-										.wk-cols
-											.wk-col-5 5
-											.wk-col-7 7
-
-										.wk-cols
-											.wk-col-6 6
-											.wk-col-6 6
-
-										.wk-cols
-											.wk-col-7 7
-											.wk-col-5 5
-
-										.wk-cols
-											.wk-col-8 8
-											.wk-col-4 4
-
-										.wk-cols
-											.wk-col-9 9
-											.wk-col-3 3
-
-										.wk-cols
-											.wk-col-10 10
-											.wk-col-2 2
-
-										.wk-cols
-											.wk-col-11 11
-											.wk-col-1 1
-
-										.wk-cols
-											.wk-col-12 12
-
-										.wk-cols
-											.wk-col-2 2a
-											.wk-col-5 5a
-											.wk-col-3 3a
-											.wk-col-2 2a
-
-									h3 WK Cols 14
-									.wk-cols-14(style="background-color: aqua;")
-										.wk-cols-t
-											.wk-col-1 1 t
-											.wk-col-13 13 t
-
-										.wk-cols-te
-											.wk-col-2 2 te
-											.wk-col-12 12 te
-
-										.wk-cols-m
-											.wk-col-3 3 m
-											.wk-col-11 11 m
-
-										.wk-cols-me
-											.wk-col-4 4 me
-											.wk-col-10 10 me
-
-										.wk-cols
-											.wk-col-5 5
-											.wk-col-9 9
-
-										.wk-cols
-											.wk-col-6 6
-											.wk-col-8 8
-
-										.wk-cols
-											.wk-col-7 7
-											.wk-col-7 7
-
-										.wk-cols
-											.wk-col-8 8
-											.wk-col-6 6
-
-										.wk-cols
-											.wk-col-9 9
-											.wk-col-5 5
-
-										.wk-cols
-											.wk-col-10 10
-											.wk-col-4 4
-
-										.wk-cols
-											.wk-col-11 11
-											.wk-col-3 3
-
-										.wk-cols
-											.wk-col-12 12
-											.wk-col-2 2
-
-										.wk-cols
-											.wk-col-13 13
-											.wk-col-1 1
-
-									h3 WK Cols 16
-									.wk-cols-16(style="background-color: orange;")
-										.wk-cols-t
-											.wk-col-1 1 t
-											.wk-col-15 15 t
-
-										.wk-cols-te
-											.wk-col-2 2 te
-											.wk-col-14 14 te
-
-										.wk-cols-m
-											.wk-col-3 3 m
-											.wk-col-13 13 m
-
-										.wk-cols-me
-											.wk-col-4 4 me
-											.wk-col-12 12 me
-
-										.wk-cols
-											.wk-col-5 5
-											.wk-col-11 11
-
-										.wk-cols
-											.wk-col-6 6
-											.wk-col-10 10
-
-										.wk-cols
-											.wk-col-7 7
-											.wk-col-9 9
-
-										.wk-cols
-											.wk-col-8 8
-											.wk-col-8 8
-
-										.wk-cols
-											.wk-col-9 9
-											.wk-col-7 7
-
-										.wk-cols
-											.wk-col-10 10
-											.wk-col-6 6
-
-										.wk-cols
-											.wk-col-11 11
-											.wk-col-5 5
-
-										.wk-cols
-											.wk-col-12 12
-											.wk-col-4 4
-
-										.wk-cols
-											.wk-col-13 13
-											.wk-col-3 3
-
-										.wk-cols
-											.wk-col-14 14
-											.wk-col-2 2
-
-										.wk-cols
-											.wk-col-15 15
-											.wk-col-1 1
-
-									h3 WK Col e 16
-									.cont(style="background-color: cornflowerblue;")
-										.wk-cols
-											.wk-col 2e
-											.wk-col 2e
-
-										.wk-cols
-											- for (n=0; n<3; n++)
-												.wk-col 3e
-
-										.wk-cols
-											- for (n=0; n<4; n++)
-												.wk-col 4e
-
-										.wk-cols
-											- for (n=0; n<5; n++)
-												.wk-col 5e
-
-										.wk-cols
-											- for (n=0; n<6; n++)
-												.wk-col 6e
-
-										.wk-cols
-											- for (n=0; n<7; n++)
-												.wk-col 7e
-
-										.wk-cols
-											- for (n=0; n<8; n++)
-												.wk-col 8e
-
-										.wk-cols
-											- for (n=0; n<9; n++)
-												.wk-col 9e
-
-										.wk-cols
-											- for (n=0; n<10; n++)
-												.wk-col 10e
-
-										.wk-cols
-											- for (n=0; n<11; n++)
-												.wk-col 11e
-
-										.wk-cols
-											- for (n=0; n<12; n++)
-												.wk-col 12e
-
-										.wk-cols
-											- for (n=0; n<13; n++)
-												.wk-col 13e
-
-										.wk-cols
-											- for (n=0; n<14; n++)
-												.wk-col 14e
-
-										.wk-cols
-											- for (n=0; n<15; n++)
-												.wk-col 15e
-
-										.wk-cols
-											- for (n=0; n<16; n++)
-												.wk-col 16e
-
-									h3 WK Col t 16
-									.cont(style="background-color: gold;")
-										.wk-cols-t
-											.wk-col 2e
-											.wk-col 2e
-
-										.wk-cols-t
-											- for (n=0; n<3; n++)
-												.wk-col 3e
-
-										.wk-cols-t
-											- for (n=0; n<4; n++)
-												.wk-col 4e
-
-										.wk-cols-t
-											- for (n=0; n<5; n++)
-												.wk-col 5e
-
-										.wk-cols-t
-											- for (n=0; n<6; n++)
-												.wk-col 6e
-
-										.wk-cols-t
-											- for (n=0; n<7; n++)
-												.wk-col 7e
-
-										.wk-cols-t
-											- for (n=0; n<8; n++)
-												.wk-col 8e
-
-										.wk-cols-t
-											- for (n=0; n<9; n++)
-												.wk-col 9e
-
-										.wk-cols-t
-											- for (n=0; n<10; n++)
-												.wk-col 10e
-
-										.wk-cols-t
-											- for (n=0; n<11; n++)
-												.wk-col 11e
-
-										.wk-cols-t
-											- for (n=0; n<12; n++)
-												.wk-col 12e
-
-										.wk-cols-t
-											- for (n=0; n<13; n++)
-												.wk-col 13e
-
-										.wk-cols-t
-											- for (n=0; n<14; n++)
-												.wk-col 14e
-
-										.wk-cols-t
-											- for (n=0; n<15; n++)
-												.wk-col 15e
-
-										.wk-cols-t
-											- for (n=0; n<16; n++)
-												.wk-col 16e
-
-
-									h3 WK Col m 16
-									.wk-cols-m
-										.wk-col 2e
-										.wk-col 2e
-
-									.wk-cols-m
-										- for (n=0; n<3; n++)
-											.wk-col 3e
-
-									.wk-cols-m
-										- for (n=0; n<4; n++)
-											.wk-col 4e
-
-									.wk-cols-m
-										- for (n=0; n<5; n++)
-											.wk-col 5e
-
-									.wk-cols-m
-										- for (n=0; n<6; n++)
-											.wk-col 6e
-
-									.wk-cols-m
-										- for (n=0; n<7; n++)
-											.wk-col 7e
-
-									.wk-cols-m
-										- for (n=0; n<8; n++)
-											.wk-col 8e
-
-									.wk-cols-m
-										- for (n=0; n<9; n++)
-											.wk-col 9e
-
-									.wk-cols-m
-										- for (n=0; n<10; n++)
-											.wk-col 10e
-
-									.wk-cols-m
-										- for (n=0; n<11; n++)
-											.wk-col 11e
-
-									.wk-cols-m
-										- for (n=0; n<12; n++)
-											.wk-col 12e
-
-									.wk-cols-m
-										- for (n=0; n<13; n++)
-											.wk-col 13e
-
-									.wk-cols-m
-										- for (n=0; n<14; n++)
-											.wk-col 14e
-
-									.wk-cols-m
-										- for (n=0; n<15; n++)
-											.wk-col 15e
-
-									.wk-cols-m
-										- for (n=0; n<16; n++)
-											.wk-col 16e
-
-				.wk-section
-					.wk-section-wrap
-						p Este contenido tiene el wrap del body
-						.wk-wrap-700
-							.wk-section
-								.wk-section-wrap
-									p Este contenido tiene un wrap a 700 dentro de otro wrap
-
-
-
-
-
-					
+
+				article
+					section#why-to-use.wk-section.page.wk-flex.wk-flex-align-center.wk-flex-justify-center
+						.wk-section-wrap
+							h1 Por qué deberias usarlo
+							ol
+								li Simple de usar
+								li Compatible con IE9
+								li Puedes seleccionar entre 4 sistemas de columnas, 8, 12 (default), 14 y 16
+							p Empezar
+
+					section#headings.wk-section.page
+						.wk-section-wrap
+
+							h1 Headings
+							p
+								| Un diseño consistente mantendrá las cosas simples y ordenadas, es por eso que WPKit ui incorpora solo 3 tamaños de headers en porcentajes sobre
+								| el tamaño de fuente principal, al 250%, 200% y al 150%. para headings h1, h2 y h3. El resto, h4, h5 y h6 al 100%, esto quiere decir que mantendrán el mismo
+								| tamaño que el tamaño de fuente principal, con peso de fuente light (300), regular(400) y bold(700) respectivamente.
+
+							h1 Heading <span style="font-size: 13px"><mark>&lt;h1&gt;</mark> 250%</span>
+							h2 Heading <span style="font-size: 13px"><mark>&lt;h2&gt;</mark> 200%</span>
+							h3 Heading <span style="font-size: 13px"><mark>&lt;h3&gt;</mark> 150%</span>
+							h4 Heading <span style="font-size: 13px"><mark>&lt;h4&gt;</mark> 100% light</span>
+							h5 Heading <span style="font-size: 13px"><mark>&lt;h5&gt;</mark> 100% regular</span>
+							h6 Heading <span style="font-size: 13px"><mark>&lt;h6&gt;</mark> 100% bold</span>
+
+
+					section#only-device.wk-section.page
+						.wk-section-wrap
+							h1 Solo en Desktop, Móvil, Tablet y Móvil xs
+							p
+								| Las clases <mark>wk-d</mark> <mark>wk-m</mark> <mark>wk-t</mark> y <mark>wk-m-xs</mark> muestran contenidos para dispositivos específicos.
+
+							pre.prettyprint
+								code
+									|	&lt;div class=&quot;wk-d&quot;&gt;
+									|		&lt;!--Solo aparecerá en desktop (mayor a 771px) --&gt;
+									|	&lt;/div&gt;
+									|
+									|
+									|	&lt;div class=&quot;wk-m&quot;&gt;
+									|		&lt;!--Aparecerá en cualquier dispositivo m&oacute;vil (menor a 770px) --&gt;
+									|	&lt;/div&gt;
+									|
+									|
+									|	&lt;div class=&quot;wk-t&quot;&gt;
+									|		&lt;!--Solo aparecerá en tablet (entre 415px y 770px) --&gt;
+									|	&lt;/div&gt;
+									|
+									|
+									|	&lt;div class=&quot;wk-m-xs&quot;&gt;
+									|		&lt;!--Solo aparecerá en dispositivos m&oacute;viles peque&ntilde;os (menor a 414px) --&gt;
+									|	&lt;/div&gt;
+
+							.wk-d: p Este contenido solo aparecerá en desktop
+							.wk-m: p Este contenido aparecerá en cualquier dispositivo móvil
+							.wk-t: p Este contenido solo aparecerá en tablet
+							.wk-m-xs: p Este contenido solo aparecerá en móvil xs
+
+					include section-wrap.pug
+
+					section#cols-system.wk-section.page
+						.wk-section-wrap
+							h1 Sistema de columnas
+							p
+								| Sin más ni más puedes empezar a utilizar el sistema de columnas especificando un contenedor
+								| <mark>wk-cols</mark> y contenedores hijos <mark>wk-col</mark>. Es muy simple, "cols" plural para el contenedor, "col" singular para cada columna.
+
+							pre.prettyprint
+								code
+									| 	&lt;div class=&quot;wk-cols&quot;&gt;
+									|		&lt;div class=&quot;wk-col&quot;&gt;Columna 1&lt;/div&gt;
+									|		&lt;div class=&quot;wk-col&quot;&gt;Columna 2&lt;/div&gt;
+									|	&lt;/div&gt;
+
+							p
+								| Esto hará automáticamente un layout de columnas iguales, no importa cuantas columnas coloques 2 o 100, realmente improbable pero aún así
+								| todas las columnas tendrán la misma proporción gracias al poder de Flexbox
+							p
+								| ¿Preocupado por la compatibilidad con IE9 o navegadores que no soportan Flexbox?, estas cubierto, WPKit ui cargará estílos soportados por esos navegadores
+								| de forma automática, o si lo prefieres, puedes anular Flexbox en cualquier explorador; simplemente añade la clase <mark>.no-flexbox</mark> a la etiqueta html
+
+					section#cols-modules.wk-section.page
+						.wk-section-wrap
+							h1 Proporción de columnas
+							p
+								| Por default el sistema de columnas es en base a 12 módulos pero es posible <a href="#">cambiarlo a 8, 14 o 16</a>.
+
+							.wk-cols
+								- for ( n=1; n<13; n++ )
+									.wk-col col #{n}
+
+							p
+								| Para proporcionar las columnas solo añade un sufijo con la proporción que deseas para cada columna p.ej <mark>wk-cols-1</mark> donde "-1" (guion uno) será
+								| la proporción dentro del sistema reticular
+
+							pre.prettyprint
+								code
+									|   	&lt;!-- Generar&aacute; una columna de 4 m&oacute;dulos y otra de 8--&gt;
+									|	&lt;div class=&quot;wk-cols&quot;&gt;
+									|		&lt;div class=&quot;wk-col-4&quot;&gt;Columna 1&lt;/div&gt;
+									|		&lt;div class=&quot;wk-col-8&quot;&gt;Columna 2&lt;/div&gt;
+									|	&lt;/div&gt;
+
+							.cont.wk-text-center(style="background-color: #e6e6e6;")
+								.wk-cols
+									.wk-col-1 .wk-col-1
+									.wk-col-11 .wk-col-11
+
+								.wk-cols
+									.wk-col-2 .wk-col-2
+									.wk-col-10 .wk-col-10
+
+								.wk-cols
+									.wk-col-3 .wk-col-3
+									.wk-col-9 .wk-col-9
+
+								.wk-cols
+									.wk-col-4 .wk-col-4
+									.wk-col-8 .wk-col-8
+
+								.wk-cols
+									.wk-col-5 .wk-col-5
+									.wk-col-7 .wk-col-7
+
+								.wk-cols
+									.wk-col-6 .wk-col-6
+									.wk-col-6 .wk-col-6
+
+								.wk-cols
+									.wk-col-7 .wk-col-7
+									.wk-col-5 .wk-col-5
+
+								.wk-cols
+									.wk-col-8 .wk-col-8
+									.wk-col-4 .wk-col-4
+
+								.wk-cols
+									.wk-col-9 .wk-col-9
+									.wk-col-3 .wk-col-3
+
+								.wk-cols
+									.wk-col-10 .wk-col-10
+									.wk-col-2 .wk-col-2
+
+								.wk-cols
+									.wk-col-11 .wk-col-11
+									.wk-col-1 .wk-col-1
+
+					section#change-cols-system.wk-section.page
+						.wk-section-wrap
+							h1 Cambiar el sistema de columnas
+							p
+								| WPKit ui te provee con 4 sistemas de columnas 8, 12, 14 y 16, el default es 12 ya que es el más común así que no será necesario hacer alguna especificación
+								| para trabajar con él. Por el contrario para activar el resto de los sistemas solo deberás añadir la clase <mark>.wk-cols-8</mark>
+								| <mark>.wk-cols-14</mark> y <mark>.wk-cols-16</mark> respectivamente a un contendor para <mark>.wk-cols</mark> de la siguiente forma:
+
+							pre.prettyprint
+								code
+									|	&lt;div class=&quot;wk-cols-8&quot;&gt;
+									|		&lt;div class=&quot;wk-cols&quot;&gt;
+									|			&lt;div class=&quot;wk-col-2&quot;&gt;Columna 1&lt;/div&gt;
+									|			&lt;div class=&quot;wk-col-4&quot;&gt;Columna 2&lt;/div&gt;
+									|			&lt;div class=&quot;wk-col-2&quot;&gt;Columna 3&lt;/div&gt;
+									|		&lt;/div&gt;
+									|	&lt;/div&gt;
+
+							h1 Cambiar el sistema de columnas de forma <strong>global</strong>
+							p
+								| El método anterior activara el sistema de columnas especificado en cada bloque de columnas, lo que puede resultar en una tarea tediosa y complicada
+								| si deseas aplicar determinado sistema de columnas a todo el layout.
+							p
+								|Para aplicar cualquiera de los sistemas de columnas de forma global solo
+								| deberas añadir la clase <mark>.wk-cols-8</mark> <mark>.wk-cols-14</mark> o <mark>.wk-cols-16</mark> a un contenedor global como la etiqueta de body o html.
+								| Esto heredará el sistema a todos los bloques de columnas sin importar su ubiación en el layout.
+
+							pre.prettyprint
+								code
+									|	&lt;!-- Al aplicar la clase wk-cols-8 a la etiqueta &quot;body&quot;, todos los
+									|	contenedores wk-cols heredan las clases que construyen las columnas--&gt;
+									|
+									|	&lt;body class=&quot;wk-cols-8&quot;&gt;
+									|		&lt;header&gt;
+									|			&lt;h1&gt;Whatever title&lt;/h1&gt;
+									|			&lt;section id=&quot;whichever-section&quot;&gt;
+									|				&lt;!-- Heredará el sistema de columnas de 8 módulos--&gt;
+									|				&lt;div class=&quot;wk-cols&quot;&gt;
+									|					&lt;div class=&quot;wk-col-2&quot;&gt;Columna 1&lt;/div&gt;
+									|					&lt;div class=&quot;wk-col-6&quot;&gt;Columna 2&lt;/div&gt;
+									|				&lt;/div&gt;
+									|			&lt;/section&gt;
+									|		&lt;/header&gt;
+									|		&lt;!-- Heredará el sistema de columnas de 8 módulos--&gt;
+									|		&lt;div class=&quot;wk-cols&quot;&gt;
+									|			&lt;div class=&quot;wk-col-1&quot;&gt;Columna 1&lt;/div&gt;
+									|			&lt;div class=&quot;wk-col-6&quot;&gt;Columna 2&lt;/div&gt;
+									|			&lt;div class=&quot;wk-col-1&quot;&gt;Columna 3&lt;/div&gt;
+									|		&lt;/div&gt;
+									|	&lt;/body&gt;
+
+					section#more-cols.wk-section.page
+						.wk-section-wrap
+
+							h1 Cols n cols
+
+							h3 wk-cols / No Flexbox Todos los items se apilan en móvil
+							.wk-cols(style="background-color: gold")
+								- for ( n=1; n<13; n++ )
+									.wk-col col #{n}
+
+							h3 wk-cols-t / No Flexbox permanecerán en tablet solo se apilarán en móvil xss
+							.wk-cols-t(style="background-color: tomato")
+								- for ( n=1; n<13; n++ )
+									.wk-col col #{n}
+
+							h3 wk-cols-m / No Flexbox Nunca se apilarán
+							.wk-cols-m(style="background-color: dodgerblue")
+								- for ( n=1; n<13; n++ )
+									.wk-col col #{n}
+
+							h3 wk-cols / wk-cols-1 - Se apilarán en todos los dispositivos móviles
+							.wk-cols(style="background-color: aquamarine")
+								- for ( n=1; n<13; n++ )
+									.wk-col-1 col #{n}
+							h3 WK Cols 8
+							.wk-cols-8(style="background-color: mediumpurple;")
+								.wk-cols-t
+									.wk-col-1 1 t
+									.wk-col-7 7 t
+
+								.wk-cols-te
+									.wk-col-2 2 te
+									.wk-col-6 6 te
+
+								.wk-cols-m
+									.wk-col-3 3 m
+									.wk-col-5 5 m
+
+								.wk-cols
+									.wk-col-4 4
+									.wk-col-4 4
+
+								.wk-cols-me
+									.wk-col-5 5 me
+									.wk-col-3 3 me
+
+								.wk-cols
+									.wk-col-6 6
+									.wk-col-2 2
+
+								.wk-cols
+									.wk-col-7 7
+									.wk-col-1 1
+
+
+							h3 WK Cols 12
+							.cont(style="background-color: wheat;")
+								.wk-cols-t
+									.wk-col-1 1 t
+									.wk-col-11 11 t
+
+								.wk-cols-te
+									.wk-col-2 2 te
+									.wk-col-10 10 te
+
+								.wk-cols-m
+									.wk-col-3 3 m
+									.wk-col-9 9 m
+
+								.wk-cols-me
+									.wk-col-4 4 me
+									.wk-col-8 8 me
+
+								.wk-cols
+									.wk-col-5 5
+									.wk-col-7 7
+
+								.wk-cols
+									.wk-col-6 6
+									.wk-col-6 6
+
+								.wk-cols
+									.wk-col-7 7
+									.wk-col-5 5
+
+								.wk-cols
+									.wk-col-8 8
+									.wk-col-4 4
+
+								.wk-cols
+									.wk-col-9 9
+									.wk-col-3 3
+
+								.wk-cols
+									.wk-col-10 10
+									.wk-col-2 2
+
+								.wk-cols
+									.wk-col-11 11
+									.wk-col-1 1
+
+								.wk-cols
+									.wk-col-12 12
+
+								.wk-cols
+									.wk-col-2 2a
+									.wk-col-5 5a
+									.wk-col-3 3a
+									.wk-col-2 2a
+
+							h3 WK Cols 14
+							.wk-cols-14(style="background-color: aqua;")
+								.wk-cols-t
+									.wk-col-1 1 t
+									.wk-col-13 13 t
+
+								.wk-cols-te
+									.wk-col-2 2 te
+									.wk-col-12 12 te
+
+								.wk-cols-m
+									.wk-col-3 3 m
+									.wk-col-11 11 m
+
+								.wk-cols-me
+									.wk-col-4 4 me
+									.wk-col-10 10 me
+
+								.wk-cols
+									.wk-col-5 5
+									.wk-col-9 9
+
+								.wk-cols
+									.wk-col-6 6
+									.wk-col-8 8
+
+								.wk-cols
+									.wk-col-7 7
+									.wk-col-7 7
+
+								.wk-cols
+									.wk-col-8 8
+									.wk-col-6 6
+
+								.wk-cols
+									.wk-col-9 9
+									.wk-col-5 5
+
+								.wk-cols
+									.wk-col-10 10
+									.wk-col-4 4
+
+								.wk-cols
+									.wk-col-11 11
+									.wk-col-3 3
+
+								.wk-cols
+									.wk-col-12 12
+									.wk-col-2 2
+
+								.wk-cols
+									.wk-col-13 13
+									.wk-col-1 1
+
+							h3 WK Cols 16
+							.wk-cols-16(style="background-color: orange;")
+								.wk-cols-t
+									.wk-col-1 1 t
+									.wk-col-15 15 t
+
+								.wk-cols-te
+									.wk-col-2 2 te
+									.wk-col-14 14 te
+
+								.wk-cols-m
+									.wk-col-3 3 m
+									.wk-col-13 13 m
+
+								.wk-cols-me
+									.wk-col-4 4 me
+									.wk-col-12 12 me
+
+								.wk-cols
+									.wk-col-5 5
+									.wk-col-11 11
+
+								.wk-cols
+									.wk-col-6 6
+									.wk-col-10 10
+
+								.wk-cols
+									.wk-col-7 7
+									.wk-col-9 9
+
+								.wk-cols
+									.wk-col-8 8
+									.wk-col-8 8
+
+								.wk-cols
+									.wk-col-9 9
+									.wk-col-7 7
+
+								.wk-cols
+									.wk-col-10 10
+									.wk-col-6 6
+
+								.wk-cols
+									.wk-col-11 11
+									.wk-col-5 5
+
+								.wk-cols
+									.wk-col-12 12
+									.wk-col-4 4
+
+								.wk-cols
+									.wk-col-13 13
+									.wk-col-3 3
+
+								.wk-cols
+									.wk-col-14 14
+									.wk-col-2 2
+
+								.wk-cols
+									.wk-col-15 15
+									.wk-col-1 1
+
+							h3 WK Col e 16
+							.cont(style="background-color: cornflowerblue;")
+								.wk-cols
+									.wk-col 2e
+									.wk-col 2e
+
+								.wk-cols
+									- for (n=0; n<3; n++)
+										.wk-col 3e
+
+								.wk-cols
+									- for (n=0; n<4; n++)
+										.wk-col 4e
+
+								.wk-cols
+									- for (n=0; n<5; n++)
+										.wk-col 5e
+
+								.wk-cols
+									- for (n=0; n<6; n++)
+										.wk-col 6e
+
+								.wk-cols
+									- for (n=0; n<7; n++)
+										.wk-col 7e
+
+								.wk-cols
+									- for (n=0; n<8; n++)
+										.wk-col 8e
+
+								.wk-cols
+									- for (n=0; n<9; n++)
+										.wk-col 9e
+
+								.wk-cols
+									- for (n=0; n<10; n++)
+										.wk-col 10e
+
+								.wk-cols
+									- for (n=0; n<11; n++)
+										.wk-col 11e
+
+								.wk-cols
+									- for (n=0; n<12; n++)
+										.wk-col 12e
+
+								.wk-cols
+									- for (n=0; n<13; n++)
+										.wk-col 13e
+
+								.wk-cols
+									- for (n=0; n<14; n++)
+										.wk-col 14e
+
+								.wk-cols
+									- for (n=0; n<15; n++)
+										.wk-col 15e
+
+								.wk-cols
+									- for (n=0; n<16; n++)
+										.wk-col 16e
+
+							h3 WK Col t 16
+							.cont(style="background-color: gold;")
+								.wk-cols-t
+									.wk-col 2e
+									.wk-col 2e
+
+								.wk-cols-t
+									- for (n=0; n<3; n++)
+										.wk-col 3e
+
+								.wk-cols-t
+									- for (n=0; n<4; n++)
+										.wk-col 4e
+
+								.wk-cols-t
+									- for (n=0; n<5; n++)
+										.wk-col 5e
+
+								.wk-cols-t
+									- for (n=0; n<6; n++)
+										.wk-col 6e
+
+								.wk-cols-t
+									- for (n=0; n<7; n++)
+										.wk-col 7e
+
+								.wk-cols-t
+									- for (n=0; n<8; n++)
+										.wk-col 8e
+
+								.wk-cols-t
+									- for (n=0; n<9; n++)
+										.wk-col 9e
+
+								.wk-cols-t
+									- for (n=0; n<10; n++)
+										.wk-col 10e
+
+								.wk-cols-t
+									- for (n=0; n<11; n++)
+										.wk-col 11e
+
+								.wk-cols-t
+									- for (n=0; n<12; n++)
+										.wk-col 12e
+
+								.wk-cols-t
+									- for (n=0; n<13; n++)
+										.wk-col 13e
+
+								.wk-cols-t
+									- for (n=0; n<14; n++)
+										.wk-col 14e
+
+								.wk-cols-t
+									- for (n=0; n<15; n++)
+										.wk-col 15e
+
+								.wk-cols-t
+									- for (n=0; n<16; n++)
+										.wk-col 16e
+
+
+							h3 WK Col m 16
+							.wk-cols-m
+								.wk-col 2e
+								.wk-col 2e
+
+							.wk-cols-m
+								- for (n=0; n<3; n++)
+									.wk-col 3e
+
+							.wk-cols-m
+								- for (n=0; n<4; n++)
+									.wk-col 4e
+
+							.wk-cols-m
+								- for (n=0; n<5; n++)
+									.wk-col 5e
+
+							.wk-cols-m
+								- for (n=0; n<6; n++)
+									.wk-col 6e
+
+							.wk-cols-m
+								- for (n=0; n<7; n++)
+									.wk-col 7e
+
+							.wk-cols-m
+								- for (n=0; n<8; n++)
+									.wk-col 8e
+
+							.wk-cols-m
+								- for (n=0; n<9; n++)
+									.wk-col 9e
+
+							.wk-cols-m
+								- for (n=0; n<10; n++)
+									.wk-col 10e
+
+							.wk-cols-m
+								- for (n=0; n<11; n++)
+									.wk-col 11e
+
+							.wk-cols-m
+								- for (n=0; n<12; n++)
+									.wk-col 12e
+
+							.wk-cols-m
+								- for (n=0; n<13; n++)
+									.wk-col 13e
+
+							.wk-cols-m
+								- for (n=0; n<14; n++)
+									.wk-col 14e
+
+							.wk-cols-m
+								- for (n=0; n<15; n++)
+									.wk-col 15e
+
+							.wk-cols-m
+								- for (n=0; n<16; n++)
+									.wk-col 16e
+
+					section.wk-section
+						.wk-section-wrap
+							p Este contenido tiene el wrap del body
+							.wk-wrap-700
+								.wk-section
+									.wk-section-wrap
+										p Este contenido tiene un wrap a 700 dentro de otro wrap

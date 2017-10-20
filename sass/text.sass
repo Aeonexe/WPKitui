@@ -37,654 +37,1163 @@ p
 
 /*========== Text align ==========*/
 
-.wk-text-center
+.wk-text-center,
+[data-layout~="text-center"]
 	text-align: center
 
-.wk-text-left
-	text-align: left 
+.wk-text-left,
+[data-layout~="text-left"]
+	text-align: left
 
-.wk-text-right
+.wk-text-right,
+[data-layout~="text-right"]
 	text-align: right
 
-.wk-children-text-center
+.wk-children-text-center,
+[data-layout~="children-text-center"]
 	> *
 		text-align: center
 
-.wk-children-text-left
+.wk-children-text-left,
+[data-layout~="children-text-left"]
 	> *
-		text-align: left 
+		text-align: left
 
-.wk-children-text-right
+.wk-children-text-right,
+[data-layout~="children-text-right"]
 	> *
 		text-align: right
 
 @media ( min-width: $desktop )
-	.wk-d-text-center
+	.wk-d-text-center,
+	[data-layout-desktop~="text-center"]
 		text-align: center
 
-	.wk-d-text-left
-		text-align: left 
+	.wk-d-text-left,
+	[data-layout-desktop~="text-left"]
+		text-align: left
 
-	.wk-d-text-right
+	.wk-d-text-right,
+	[data-layout-desktop~="text-right"]
 		text-align: right
 
-	.wk-d-children-text-center
+	.wk-d-children-text-center,
+	[data-layout-desktop~="children-text-center"]
 		> *
 			text-align: center
 
-	.wk-d-children-text-left
+	.wk-d-children-text-left,
+	[data-layout-desktop~="children-text-left"]
 		> *
-			text-align: left 
+			text-align: left
 
-	.wk-d-children-text-right
+	.wk-d-children-text-right,
+	[data-layout-desktop~="children-text-right"]
 		> *
 			text-align: right
 
 @media ( max-width: $mobile )
-	.wk-m-text-center
+	.wk-m-text-center,
+	[data-layout-mobile~="text-center"]
 		text-align: center
 
-	.wk-m-text-left
-		text-align: left 
+	.wk-m-text-left,
+	[data-layout-mobile~="text-left"]
+		text-align: left
 
-	.wk-m-text-right
+	.wk-m-text-right,
+	[data-layout-mobile~="text-right"]
 		text-align: right
 
-	.wk-m-children-text-center
+	.wk-m-children-text-center,
+	[data-layout-mobile~="children-text-center"]
 		> *
 			text-align: center
 
-	.wk-m-children-text-left
+	.wk-m-children-text-left,
+	[data-layout-mobile~="children-text-left"]
 		> *
-			text-align: left 
+			text-align: left
 
-	.wk-m-children-text-right
+	.wk-m-children-text-right,
+	[data-layout-mobile~="children-text-right"]
+		> *
+			text-align: right
+
+@media ( min-width: $tablet ) and ( max-width: $mobile )
+	.wk-t-text-center,
+	[data-layout-tablet~="text-center"]
+		text-align: center
+
+	.wk-t-text-left,
+	[data-layout-tablet~="text-left"]
+		text-align: left
+
+	.wk-t-text-right,
+	[data-layout-tablet~="text-right"]
+		text-align: right
+
+	.wk-t-children-text-center,
+	[data-layout-tablet~="children-text-center"]
+		> *
+			text-align: center
+
+	.wk-t-children-text-left,
+	[data-layout-tablet~="children-text-left"]
+		> *
+			text-align: left
+
+	.wk-t-children-text-right,
+	[data-layout-tablet~="children-text-right"]
 		> *
 			text-align: right
 
 @media ( max-width: $mobile-xs )
-	.wk-xs-text-center
+	.wk-xs-text-center,
+	[data-layout-phone~="text-center"]
 		text-align: center
 
-	.wk-xs-text-left
-		text-align: left 
+	.wk-xs-text-left,
+	[data-layout-phone~="text-left"]
+		text-align: left
 
-	.wk-xs-text-right
+	.wk-xs-text-right,
+	[data-layout-phone~="text-right"]
 		text-align: right
 
-	.wk-xs-children-text-center
+	.wk-xs-children-text-center,
+	[data-layout-phone~="children-text-center"]
 		> *
 			text-align: center
 
-	.wk-xs-children-text-left
+	.wk-xs-children-text-left,
+	[data-layout-phone~="children-text-left"]
 		> *
-			text-align: left 
+			text-align: left
 
-	.wk-xs-children-text-right
+	.wk-xs-children-text-right,
+	[data-layout-phone~="children-text-right"]
 		> *
 			text-align: right
 
-/*========== Text align ==========*/
 
-.wk-text-decoration-underline
+/*========== Text Decoration ==========*/
+
+.wk-text-underline,
+[data-layout~="text-underline"]
 	text-decoration: underline
 
-.wk-text-decoration-overline
+.wk-text-overline,
+[data-layout~="text-overline"]
 	text-decoration: overline
 
-.wk-text-decoration-line-through
+.wk-text-line-through,
+[data-layout~="text-line-through"],
+.wk-text-line,
+[data-layout~="text-line"]
 	text-decoration: line-through
 
-.wk-text-decoration-blink
+.wk-text-blink,
+[data-layout~="text-blink"]
 	text-decoration: blink
 
-.wk-children-text-decoration-underline
+.wk-children-text-underline,
+[data-layout~="children-text-underline"]
 	> *
 		text-decoration: underline
 
-.wk-children-text-decoration-overline
+.wk-children-text-overline,
+[data-layout~="children-text-overline"]
 	> *
 		text-decoration: overline
 
-.wk-children-text-decoration-line-through
+.wk-children-text-line-through,
+[data-layout~="children-text-line-through"],
+.wk-children-text-line,
+[data-layout~="children-text-line"]
 	> *
 		text-decoration: line-through
 
-.wk-children-text-decoration-blink
+.wk-children-text-blink,
+[data-layout~="children-text-line"]
 	> *
 		text-decoration: blink
 
 @media ( min-width: $desktop )
-	.wk-d-text-decoration-underline
+	.wk-d-text-underline,
+	[data-layout-desktop~="text-underline"]
 		text-decoration: underline
 
-	.wk-d-text-decoration-overline
+	.wk-d-text-overline,
+	[data-layout-desktop~="text-overline"]
 		text-decoration: overline
 
-	.wk-d-text-decoration-line-through
+	.wk-d-text-line-through,
+	[data-layout-desktop~="text-line-through"],
+	.wk-d-text-line,
+	[data-layout-desktop~="text-line"]
 		text-decoration: line-through
 
-	.wk-d-text-decoration-blink
+	.wk-d-text-blink,
+	[data-layout-desktop~="text-blink"]
 		text-decoration: blink
 
-	.wk-d-children-text-decoration-underline
+	.wk-d-children-text-underline,
+	[data-layout-desktop~="children-text-underline"]
 		> *
 			text-decoration: underline
 
-	.wk-d-children-text-decoration-overline
+	.wk-d-children-text-overline,
+	[data-layout-desktop~="children-text-overline"]
 		> *
 			text-decoration: overline
 
-	.wk-d-children-text-decoration-line-through
+	.wk-d-children-text-line-through,
+	[data-layout-desktop~="children-text-line-through"],
+	.wk-d-children-text-line,
+	[data-layout-desktop~="children-text-line"]
 		> *
 			text-decoration: line-through
 
-	.wk-d-children-text-decoration-blink
+	.wk-d-children-text-blink,
+	[data-layout-desktop~="children-text-blink"]
 		> *
 			text-decoration: blink
 
 @media ( max-width: $mobile )
-	.wk-m-text-decoration-underline
+	.wk-m-text-underline,
+	[data-layout-mobile~="text-underline"]
 		text-decoration: underline
 
-	.wk-m-text-decoration-overline
+	.wk-m-text-overline,
+	[data-layout-mobile~="text-overline"]
 		text-decoration: overline
 
-	.wk-m-text-decoration-line-through
+	.wk-m-text-line-through,
+	[data-layout-mobile~="text-line-through"],
+	.wk-m-text-line,
+	[data-layout-mobile~="text-line"]
 		text-decoration: line-through
 
-	.wk-m-text-decoration-blink
+	.wk-m-text-blink,
+	[data-layout-mobile~="text-blink"]
 		text-decoration: blink
 
 
-	.wk-m-children-text-decoration-underline
+	.wk-m-children-text-underline,
+	[data-layout-mobile~="children-text-underline"]
 		> *
 			text-decoration: underline
 
-	.wk-m-children-text-decoration-overline
+	.wk-m-children-text-overline,
+	[data-layout-mobile~="children-text-overline"]
 		> *
 			text-decoration: overline
 
-	.wk-m-children-text-decoration-line-through
+	.wk-m-children-text-line-through,
+	[data-layout-mobile~="children-text-line-through"],
+	.wk-m-children-text-line,
+	[data-layout-mobile~="children-text-line"]
 		> *
 			text-decoration: line-through
 
-	.wk-m-children-text-decoration-blink
+	.wk-m-children-text-blink,
+	[data-layout-mobile~="children-text-blink"]
+		> *
+			text-decoration: blink
+
+@media ( min-width: $tablet ) and ( max-width: $mobile )
+	.wk-t-text-underline,
+	[data-layout-tablet~="text-underline"]
+		text-decoration: underline
+
+	.wk-t-text-overline,
+	[data-layout-tablet~="text-overline"]
+		text-decoration: overline
+
+	.wk-t-text-line-through,
+	[data-layout-tablet~="text-line-through"],
+	.wk-t-text-line,
+	[data-layout-tablet~="text-line"]
+		text-decoration: line-through
+
+	.wk-t-text-blink,
+	[data-layout-tablet~="text-blink"]
+		text-decoration: blink
+
+
+	.wk-t-children-text-underline,
+	[data-layout-tablet~="children-text-underline"]
+		> *
+			text-decoration: underline
+
+	.wk-t-children-text-overline,
+	[data-layout-tablet~="children-text-overline"]
+		> *
+			text-decoration: overline
+
+	.wk-t-children-text-line-through,
+	[data-layout-tablet~="children-text-line-through"],
+	.wk-t-children-text-line,
+	[data-layout-tablet~="children-text-line"]
+		> *
+			text-decoration: line-through
+
+	.wk-t-children-text-blink,
+	[data-layout-tablet~="children-text-blink"]
 		> *
 			text-decoration: blink
 
 @media ( max-width: $mobile-xs )
-	.wk-xs-text-decoration-underline
+	.wk-xs-text-underline,
+	[data-layout-phone~="text-underline"]
 		text-decoration: underline
 
-	.wk-xs-text-decoration-overline
+	.wk-xs-text-overline,
+	[data-layout-phone~="text-overline"]
 		text-decoration: overline
 
-	.wk-xs-text-decoration-line-through
+	.wk-xs-text-line-through,
+	[data-layout-phone~="text-line-through"],
+	.wk-xs-text-line,
+	[data-layout-phone~="text-line"]
 		text-decoration: line-through
 
-	.wk-xs-text-decoration-blink
+	.wk-xs-text-blink,
+	[data-layout-phone~="text-blink"]
 		text-decoration: blink
 
-	.wk-xs-children-text-decoration-underline
+	.wk-xs-children-text-underline,
+	[data-layout-phone~="children-text-underline"]
 		> *
 			text-decoration: underline
 
-	.wk-xs-children-text-decoration-overline
+	.wk-xs-children-text-overline,
+	[data-layout-phone~="children-text-overline"]
 		> *
 			text-decoration: overline
 
-	.wk-xs-children-text-decoration-line-through
+	.wk-xs-children-text-line-through,
+	[data-layout-phone~="children-text-line-through"],
+	.wk-xs-children-text-line,
+	[data-layout-phone~="children-text-line"],
 		> *
 			text-decoration: line-through
 
-	.wk-xs-children-text-decoration-blink
+	.wk-xs-children-text-blink,
+	[data-layout-phone~="children-text-blink"]
 		> *
 			text-decoration: blink
 
 
 /*========== Text transform ==========*/
 
-.wk-text-transform-capitalize
+.wk-text-capitalize,
+[data-layout~="text-capitalize"]
 	text-transform: capitalize
 
-.wk-text-transform-lowercase
+.wk-text-lowercase,
+[data-layout~="text-lowercase"]
 	text-transform: lowercase
 
-.wk-text-transform-uppercase
+.wk-text-uppercase,
+[data-layout~="text-uppercase"]
 	text-transform: uppercase
 
-.wk-children-text-transform-capitalize
+.wk-children-text-capitalize,
+[data-layout~="children-text-capitalize"]
 	> *
 		text-transform: capitalize
 
-.wk-children-text-transform-lowercase
+.wk-children-text-lowercase,
+[data-layout~="children-text-lowercase"]
 	> *
 		text-transform: lowercase
 
-.wk-children-text-transform-uppercase
+.wk-children-text-uppercase,
+[data-layout~="children-text-uppercase"]
 	> *
 		text-transform: uppercase
 
 @media ( min-width: $desktop )
-	.wk-d-text-transform-capitalize
+	.wk-d-text-capitalize,
+	[data-layout-mobile~="text-capitalize"]
 		text-transform: capitalize
 
-	.wk-d-text-transform-lowercase
+	.wk-d-text-lowercase,
+	[data-layout-mobile~="text-lowercase"]
 		text-transform: lowercase
 
-	.wk-d-text-transform-uppercase
+	.wk-d-text-uppercase,
+	[data-layout-mobile~="text-uppercase"]
 		text-transform: uppercase
 
-	.wk-d-children-text-transform-capitalize
+	.wk-d-children-text-capitalize,
+	[data-layout-mobile~="children-text-capitalize"]
 		> *
 			text-transform: capitalize
 
-	.wk-d-children-text-transform-lowercase
+	.wk-d-children-text-lowercase,
+	[data-layout-mobile~="children-text-lowercase"]
 		> *
 			text-transform: lowercase
 
-	.wk-d-children-text-transform-uppercase
+	.wk-d-children-text-uppercase,
+	[data-layout-mobile~="children-text-uppercase"]
 		> *
 			text-transform: uppercase
 
 @media ( max-width: $mobile )
-	.wk-m-text-transform-capitalize
+	.wk-m-text-capitalize,
+	[data-layout-mobile~="text-capitalize"]
 		text-transform: capitalize
 
-	.wk-m-text-transform-lowercase
+	.wk-m-text-lowercase,
+	[data-layout-mobile~="text-lowercase"]
 		text-transform: lowercase
 
-	.wk-m-text-transform-uppercase
+	.wk-m-text-uppercase,
+	[data-layout-mobile~="text-uppercase"]
 		text-transform: uppercase
 
-	.wk-m-children-text-transform-capitalize
+	.wk-m-children-text-capitalize,
+	[data-layout-mobile~="children-text-capitalize"]
 		> *
 			text-transform: capitalize
 
-	.wk-m-children-text-transform-lowercase
+	.wk-m-children-text-lowercase,
+	[data-layout-mobile~="children-text-lowercase"]
 		> *
 			text-transform: lowercase
 
-	.wk-m-children-text-transform-uppercase
+	.wk-m-children-text-uppercase,
+	[data-layout-mobile~="children-text-uppercase"]
+		> *
+			text-transform: uppercase
+
+@media ( min-width: $tablet ) and ( max-width: $mobile )
+	.wk-t-text-capitalize,
+	[data-layout-tablet~="text-capitalize"]
+		text-transform: capitalize
+
+	.wk-t-text-lowercase,
+	[data-layout-tablet~="text-lowercase"]
+		text-transform: lowercase
+
+	.wk-t-text-uppercase,
+	[data-layout-tablet~="text-uppercase"]
+		text-transform: uppercase
+
+	.wk-t-children-text-capitalize,
+	[data-layout-tablet~="children-text-capitalize"]
+		> *
+			text-transform: capitalize
+
+	.wk-t-children-text-lowercase,
+	[data-layout-tablet~="children-text-lowercase"]
+		> *
+			text-transform: lowercase
+
+	.wk-t-children-text-uppercase,
+	[data-layout-tablet~="children-text-uppercase"]
 		> *
 			text-transform: uppercase
 
 @media ( max-width: $mobile-xs )
-	.wk-xs-text-transform-capitalize
+	.wk-xs-text-capitalize,
+	[data-layout-phone~="text-capitalize"]
 		text-transform: capitalize
 
-	.wk-xs-text-transform-lowercase
+	.wk-xs-text-lowercase,
+	[data-layout-phone~="text-lowercase"]
 		text-transform: lowercase
 
-	.wk-xs-text-transform-uppercase
+	.wk-xs-text-uppercase,
+	[data-layout-phone~="text-uppercase"]
 		text-transform: uppercase
 
-	.wk-xs-children-text-transform-capitalize
+	.wk-xs-children-text-capitalize,
+	[data-layout-phone~="children-text-capitalize"]
 		> *
 			text-transform: capitalize
 
-	.wk-xs-children-text-transform-lowercase
+	.wk-xs-children-text-lowercase,
+	[data-layout-phone~="children-text-lowercase"]
 		> *
 			text-transform: lowercase
 
-	.wk-xs-children-text-transform-uppercase
+	.wk-xs-children-text-uppercase,
+	[data-layout-phone~="children-text-uppercase"]
 		> *
 			text-transform: uppercase
+
 /*========== Font weight ==========*/
 
-.wk-font-weight-100
+.wk-text-100,
+[data-layout~="text-100"],
+.wk-text-light,
+[data-layout~="text-light"]
 	font-weight: 100
 
-.wk-font-weight-200
+.wk-text-200,
+[data-layout~="text-200"]
 	font-weight: 200
-	
-.wk-font-weight-300
+
+.wk-text-300,
+[data-layout~="text-300"]
 	font-weight: 300
-	
-.wk-font-weight-400
+
+.wk-text-400,
+[data-layout~="text-400"],
+.wk-text-regular,
+[data-layout~="text-regular"]
 	font-weight: 400
-	
-.wk-font-weight-500
+
+.wk-text-500,
+[data-layout~="text-500"]
 	font-weight: 500
-	
-.wk-font-weight-600
+
+.wk-text-600,
+[data-layout~="text-600"]
 	font-weight: 600
-	
-.wk-font-weight-700
+
+.wk-text-700,
+[data-layout~="text-700"],
+.wk-text-bold,
+[data-layout~="text-bold"]
 	font-weight: 700
-	
-.wk-font-weight-800
+
+.wk-text-800,
+[data-layout~="text-800"]
 	font-weight: 800
-	
-.wk-font-weight-900
+
+.wk-text-900,
+[data-layout~="text-900"]
 	font-weight: 900
 
 
-.wk-children-font-weight-100
+.wk-children-text-100,
+[data-layout~="children-text-100"],
+.wk-children-text-light,
+[data-layout~="children-text-light"]
 	> *
 		font-weight: 100
 
-.wk-children-font-weight-200
+.wk-children-text-200,
+[data-layout~="children-text-200"]
 	> *
 		font-weight: 200
-		
-.wk-children-font-weight-300
+
+.wk-children-text-300,
+[data-layout~="children-text-300"]
 	> *
 		font-weight: 300
-	
-.wk-children-font-weight-400
+
+.wk-children-text-400,
+[data-layout~="children-text-400"],
+.wk-children-text-regular,
+[data-layout~="children-text-regular"]
 	> *
 		font-weight: 400
-	
-.wk-children-font-weight-500
+
+.wk-children-text-500,
+[data-layout~="children-text-500"]
 	> *
 		font-weight: 500
-	
-.wk-children-font-weight-600
+
+.wk-children-text-600,
+[data-layout~="children-text-600"]
 	> *
 		font-weight: 600
-	
-.wk-children-font-weight-700
+
+.wk-children-text-700,
+[data-layout~="children-text-700"],
+.wk-children-text-bold,
+[data-layout~="children-text-bold"]
 	> *
 		font-weight: 700
-	
-.wk-children-font-weight-800
+
+.wk-children-text-800,
+[data-layout~="children-text-800"]
 	> *
 		font-weight: 800
-	
-.wk-children-font-weight-900
+
+.wk-children-text-900,
+[data-layout~="children-text-900"]
 	> *
 		font-weight: 900
 
 @media ( min-width: 771px )
-	.wk-d-font-weight-100
+	.wk-d-text-100,
+	[data-layout-desktop~="text-100"],
+	.wk-d-text-light,
+	[data-layout-desktop~="text-light"]
 		font-weight: 100
 
-	.wk-d-font-weight-200
+	.wk-d-text-200,
+	[data-layout-desktop~="text-200"]
 		font-weight: 200
-		
-	.wk-d-font-weight-300
+
+	.wk-d-text-300,
+	[data-layout-desktop~="text-300"]
 		font-weight: 300
-		
-	.wk-d-font-weight-400
+
+	.wk-d-text-400,
+	[data-layout-desktop~="text-400"],
+	.wk-d-text-regular,
+	[data-layout-desktop~="text-regular"]
 		font-weight: 400
-		
-	.wk-d-font-weight-500
+
+	.wk-d-text-500,
+	[data-layout-desktop~="text-500"]
 		font-weight: 500
-		
-	.wk-d-font-weight-600
+
+	.wk-d-text-600,
+	[data-layout-desktop~="text-600"]
 		font-weight: 600
-		
-	.wk-d-font-weight-700
+
+	.wk-d-text-700,
+	[data-layout-desktop~="text-700"],
+	.wk-d-text-bold,
+	[data-layout-desktop~="text-bold"]
 		font-weight: 700
-		
-	.wk-d-font-weight-800
+
+	.wk-d-text-800,
+	[data-layout-desktop~="text-800"]
 		font-weight: 800
-		
-	.wk-d-font-weight-900
+
+	.wk-d-text-900,
+	[data-layout-desktop~="text-900"]
 		font-weight: 900
 
-	.wk-d-children-font-weight-100
+	.wk-d-children-text-100,
+	[data-layout-desktop~="children-text-100"],
+	.wk-d-children-text-light,
+	[data-layout-desktop~="children-text-light"]
 		> *
 			font-weight: 100
 
-	.wk-d-children-font-weight-200
+	.wk-d-children-text-200,
+	[data-layout-desktop~="children-text-200"]
 		> *
 			font-weight: 200
-		
-	.wk-d-children-font-weight-300
+
+	.wk-d-children-text-300,
+	[data-layout-desktop~="children-text-300"]
 		> *
 			font-weight: 300
-		
-	.wk-d-children-font-weight-400
+
+	.wk-d-children-text-400,
+	[data-layout-desktop~="children-text-400"],
+	.wk-d-children-text-regular,
+	[data-layout-desktop~="children-text-regular"]
 		> *
 			font-weight: 400
-		
-	.wk-d-children-font-weight-500
+
+	.wk-d-children-text-500,
+	[data-layout-desktop~="children-text-500"]
 		> *
 			font-weight: 500
-		
-	.wk-d-children-font-weight-600
+
+	.wk-d-children-text-600,
+	[data-layout-desktop~="children-text-600"]
 		> *
 			font-weight: 600
-		
-	.wk-d-children-font-weight-700
+
+	.wk-d-children-text-700,
+	[data-layout-desktop~="children-text-700"],
+	.wk-d-children-text-bold,
+	[data-layout-desktop~="children-text-bold"]
+
 		> *
 			font-weight: 700
-		
-	.wk-d-children-font-weight-800
+
+	.wk-d-children-text-800,
+	[data-layout-desktop~="children-text-800"]
 		> *
 			font-weight: 800
-		
-	.wk-d-children-font-weight-900
+
+	.wk-d-children-text-900,
+	[data-layout-desktop~="children-text-900"]
 		> *
 			font-weight: 900
 
 @media ( max-width: 770px )
-	.wk-m-font-weight-100
+	.wk-m-text-100,
+	[data-layout-mobile~="text-100"],
+	.wk-m-text-light,
+	[data-layout-mobile~="text-light"]
 		font-weight: 100
 
-	.wk-m-font-weight-200
+	.wk-m-text-200,
+	[data-layout-mobile~="text-200"]
 		font-weight: 200
-		
-	.wk-m-font-weight-300
+
+	.wk-m-text-300,
+	[data-layout-mobile~="text-300"]
 		font-weight: 300
-		
-	.wk-m-font-weight-400
+
+	.wk-m-text-400,
+	[data-layout-mobile~="text-400"],
+	.wk-m-text-regular,
+	[data-layout-mobile~="text-regular"]
 		font-weight: 400
-		
-	.wk-m-font-weight-500
+
+	.wk-m-text-500,
+	[data-layout-mobile~="text-500"]
 		font-weight: 500
-		
-	.wk-m-font-weight-600
+
+	.wk-m-text-600,
+	[data-layout-mobile~="text-600"]
 		font-weight: 600
-		
-	.wk-m-font-weight-700
+
+	.wk-m-text-700,
+	[data-layout-mobile~="text-700"]
 		font-weight: 700
-		
-	.wk-m-font-weight-800
+
+	.wk-m-text-800,
+	[data-layout-mobile~="text-800"],
+	.wk-m-text-bold,
+	[data-layout-mobile~="text-bold"]
 		font-weight: 800
-		
-	.wk-m-font-weight-900
+
+	.wk-m-text-900,
+	[data-layout-mobile~="text-900"]
 		font-weight: 900
 
-	.wk-m-children-font-weight-100
+	.wk-m-children-text-100,
+	[data-layout-mobile~="children-text-100"],
+	.wk-m-children-text-light,
+	[data-layout-mobile~="children-text-light"]
 		> *
 			font-weight: 100
 
-	.wk-m-children-font-weight-200
+	.wk-m-children-text-200,
+	[data-layout-mobile~="children-text-200"]
 		> *
 			font-weight: 200
-		
-	.wk-m-children-font-weight-300
+
+	.wk-m-children-text-300,
+	[data-layout-mobile~="children-text-300"]
 		> *
 			font-weight: 300
-		
-	.wk-m-children-font-weight-400
+
+	.wk-m-children-text-400,
+	[data-layout-mobile~="children-text-400"],
+	.wk-m-children-text-regular,
+	[data-layout-mobile~="children-text-regular"]
 		> *
 			font-weight: 400
-		
-	.wk-m-children-font-weight-500
+
+	.wk-m-children-text-500,
+	[data-layout-mobile~="children-text-500"]
 		> *
 			font-weight: 500
-		
-	.wk-m-children-font-weight-600
+
+	.wk-m-children-text-600,
+	[data-layout-mobile~="children-text-600"]
 		> *
 			font-weight: 600
-		
-	.wk-m-children-font-weight-700
+
+	.wk-m-children-text-700,
+	[data-layout-mobile~="children-text-700"],
+	.wk-m-children-text-bold,
+	[data-layout-mobile~="children-text-bold"]
 		> *
 			font-weight: 700
-		
-	.wk-m-children-font-weight-800
+
+	.wk-m-children-text-800,
+	[data-layout-mobile~="children-text-800"]
 		> *
 			font-weight: 800
-		
-	.wk-m-children-font-weight-900
+
+	.wk-m-children-text-900,
+	[data-layout-mobile~="children-text-900"]
+		> *
+			font-weight: 900
+
+@media ( min-width: $tablet ) and ( max-width: $mobile )
+	.wk-t-text-100,
+	[data-layout-tablet~="text-100"],
+	.wk-t-text-light,
+	[data-layout-tablet~="text-light"]
+		font-weight: 100
+
+	.wk-t-text-200,
+	[data-layout-tablet~="text-200"]
+		font-weight: 200
+
+	.wk-t-text-300,
+	[data-layout-tablet~="text-300"]
+		font-weight: 300
+
+	.wk-t-text-400,
+	[data-layout-tablet~="-text-400"],
+	.wk-t-text-regular,
+	[data-layout-tablet~="text-regular"]
+		font-weight: 400
+
+	.wk-t-text-500,
+	[data-layout-tablet~="text-500"]
+		font-weight: 500
+
+	.wk-t-text-600,
+	[data-layout-tablet~="text-600"]
+		font-weight: 600
+
+	.wk-t-text-700,
+	[data-layout-tablet~="text-700"]
+		font-weight: 700
+
+	.wk-t-text-800,
+	[data-layout-tablet~="layout-tablet"],
+	.wk-t-text-bold,
+	[data-layout-tablet~="layout-tablet"]
+		font-weight: 800
+
+	.wk-t-text-900,
+	[data-layout-tablet~="text-900"]
+		font-weight: 900
+
+	.wk-t-children-text-100,
+	[data-layout-tablet~="-children-text-100"],
+	.wk-t-children-text-light,
+	[data-layout-tablet~="children-text-light"]
+		> *
+			font-weight: 100
+
+	.wk-t-children-text-200,
+	[data-layout-tablet~="children-text-200"]
+		> *
+			font-weight: 200
+
+	.wk-t-children-text-300,
+	[data-layout-tablet~="children-text-300"]
+		> *
+			font-weight: 300
+
+	.wk-t-children-text-400,
+	[data-layout-tablet~="children-text-400"],
+	.wk-t-children-text-regular,
+	[data-layout-tablet~="children-text-regular"]
+		> *
+			font-weight: 400
+
+	.wk-t-children-text-500,
+	[data-layout-tablet~="children-text-500"]
+		> *
+			font-weight: 500
+
+	.wk-t-children-text-600,
+	[data-layout-tablet~="children-text-600"]
+		> *
+			font-weight: 600
+
+	.wk-t-children-text-700,
+	[data-layout-tablet~="children-text-700"],
+	.wk-t-children-text-bold,
+	[data-layout-tablet~="children-text-bold"]
+		> *
+			font-weight: 700
+
+	.wk-t-children-text-800,
+	[data-layout-tablet~="children-text-800"]
+		> *
+			font-weight: 800
+
+	.wk-t-children-text-900,
+	[data-layout-tablet~="children-text-900"]
 		> *
 			font-weight: 900
 
 @media ( max-width: $mobile-xs )
-	.wk-xs-font-weight-100
+	.wk-xs-text-100,
+	[data-layout-phone~="text-100"],
+	.wk-xs-text-light,
+	[data-layout-phone~="text-light"]
 		font-weight: 100
 
-	.wk-xs-font-weight-200
+	.wk-xs-text-200,
+	[data-layout-phone~="text-200"]
 		font-weight: 200
-		
-	.wk-xs-font-weight-300
+
+	.wk-xs-text-300,
+	[data-layout-phone~="text-300"]
 		font-weight: 300
-		
-	.wk-xs-font-weight-400
+
+	.wk-xs-text-400,
+	[data-layout-phone~="text-400"],
+	.wk-xs-text-regular,
+	[data-layout-phone~="text-regular"]
 		font-weight: 400
-		
-	.wk-xs-font-weight-500
+
+	.wk-xs-text-500,
+	[data-layout-phone~="text-500"]
 		font-weight: 500
-		
-	.wk-xs-font-weight-600
+
+	.wk-xs-text-600,
+	[data-layout-phone~="text-600"]
 		font-weight: 600
-		
-	.wk-xs-font-weight-700
+
+	.wk-xs-text-700,
+	[data-layout-phone~="text-700"],
+	.wk-xs-text-bold,
+	[data-layout-phone~="text-bold"]
 		font-weight: 700
-		
-	.wk-xs-font-weight-800
+
+	.wk-xs-text-800,
+	[data-layout-phone~="text-800"]
 		font-weight: 800
-		
-	.wk-xs-font-weight-900
+
+	.wk-xs-text-900,
+	[data-layout-phone~="text-900"]
 		font-weight: 900
 
-	.wk-xs-children-font-weight-100
+	.wk-xs-children-text-100,
+	[data-layout-phone~="children-text-100"],
+	.wk-xs-children-text-light,
+	[data-layout-phone~="children-text-light"]
 		> *
 			font-weight: 100
 
-	.wk-xs-children-font-weight-200
+	.wk-xs-children-text-200,
+	[data-layout-phone~="children-text-200"]
 		> *
 			font-weight: 200
-		
-	.wk-xs-children-font-weight-300
+
+	.wk-xs-children-text-300,
+	[data-layout-phone~="children-text-300"]
 		> *
 			font-weight: 300
-		
-	.wk-xs-children-font-weight-400
+
+	.wk-xs-children-text-400,
+	[data-layout-phone~="children-text-400"],
+	.wk-xs-children-text-regular,
+	[data-layout-phone~="children-text-regular"]
 		> *
 			font-weight: 400
-		
-	.wk-xs-children-font-weight-500
+
+	.wk-xs-children-text-500,
+	[data-layout-phone~="children-text-500"]
 		> *
 			font-weight: 500
-		
-	.wk-xs-children-font-weight-600
+
+	.wk-xs-children-text-600,
+	[data-layout-phone~="children-text-600"]
 		> *
 			font-weight: 600
-		
-	.wk-xs-children-font-weight-700
+
+	.wk-xs-children-text-700,
+	[data-layout-phone~="children-text-700"],
+	.wk-xs-children-text-bold,
+	[data-layout-phone~="children-text-bold"]
 		> *
 			font-weight: 700
-		
-	.wk-xs-children-font-weight-800
+
+	.wk-xs-children-text-800,
+	[data-layout-phone~="children-text-800"]
 		> *
 			font-weight: 800
-		
-	.wk-xs-children-font-weight-900
+
+	.wk-xs-children-text-900,
+	[data-layout-phone~="children-text-900"]
 		> *
 			font-weight: 900
 
 /*========== Font style ==========*/
 
-.wk-font-style-italic
+.wk-text-italic,
+[data-layout~="text-italic"]
 	font-style: italic
 
-.wk-font-style-normal
+.wk-text-normal,
+[data-layout~="text-normal"]
 	font-style: normal
 
-.wk-children-font-style-italic
+.wk-text-oblique,
+[data-layout~="text-oblique"]
+	font-style: oblique
+
+.wk-children-text-italic,
+[data-layout~="children-text-italic"]
 	font-style: italic
 
-.wk-children-font-style-normal
+.wk-children-text-normal,
+[data-layout~="children-text-normal"]
 	font-style: normal
+
+.wk-children-text-oblique,
+[data-layout~="children-text-oblique"]
+	font-style: oblique
 
 @media ( min-width: $desktop )
-	.wk-d-font-style-italic
+	.wk-d-text-italic,
+	[data-layout-desktop~="text-italic"]
 		font-style: italic
 
-	.wk-d-font-style-normal
+	.wk-d-text-normal,
+	[data-layout-desktop~="text-normal"]
 		font-style: normal
 
-	.wk-d-children-font-style-italic
+	.wk-d-text-oblique,
+	[data-layout-desktop~="text-oblique"]
+		font-style: oblique
+
+	.wk-d-children-text-italic,
+	[data-layout-desktop~="text-italic"]
 		> *
 			font-style: italic
 
-	.wk-d-children-font-style-normal
+	.wk-d-children-text-normal,
+	[data-layout-desktop~="text-normal"]
 		> *
 			font-style: normal
+
+	.wk-d-children-text-oblique,
+	[data-layout-desktop~="text-oblique"]
+		> *
+			font-style: oblique
 
 @media ( max-width: $mobile )
-	.wk-m-font-style-italic
+	.wk-m-text-italic,
+	[data-layout-mobile~="text-italic"]
 		font-style: italic
 
-	.wk-m-font-style-normal
+	.wk-m-text-normal,
+	[data-layout-mobile~="text-normal"]
 		font-style: normal
 
-	.wk-m-children-font-style-italic
+	.wk-m-text-oblique,
+	[data-layout-mobile~="text-oblique"]
+		font-style: oblique
+
+	.wk-m-children-text-italic,
+	[data-layout-mobile~="children-text-italic"]
 		> *
 			font-style: italic
 
-	.wk-m-children-font-style-normal
+	.wk-m-children-text-normal,
+	[data-layout-mobile~="children-text-normal"]
 		> *
 			font-style: normal
+
+	.wk-m-children-text-oblique,
+	[data-layout-mobile~="children-text-oblique"]
+		> *
+			font-style: oblique
+
+@media ( min-width: $tablet ) and ( max-width: $mobile )
+	.wk-t-text-italic,
+	[data-layout-tablet~="text-italic"]
+		font-style: italic
+
+	.wk-t-text-normal,
+	[data-layout-tablet~="text-normal"]
+		font-style: normal
+
+	.wk-t-text-oblique,
+	[data-layout-tablet~="text-oblique"]
+		font-style: oblique
+
+	.wk-t-children-text-italic,
+	[data-layout-tablet~="children-text-italic"]
+		> *
+			font-style: italic
+
+	.wk-t-children-text-normal,
+	[data-layout-tablet~="children-text-normal"]
+		> *
+			font-style: normal
+
+	.wk-t-children-text-oblique,
+	[data-layout-tablet~="children-text-oblique"]
+		> *
+			font-style: oblique
 
 @media ( max-width: $mobile-xs )
-	.wk-xs-font-style-italic
+	.wk-xs-text-italic,
+	[data-layout-phone~="text-italic"]
 		font-style: italic
 
-	.wk-xs-font-style-normal
+	.wk-xs-text-normal,
+	[data-layout-phone~="text-normal"]
 		font-style: normal
 
-	.wk-xs-children-font-style-italic
+	.wk-xs-text-oblique,
+	[data-layout-phone~="text-oblique"]
+		font-style: oblique
+
+	.wk-xs-children-text-italic,
+	[data-layout-phone~="children-text-italic"]
 		> *
 			font-style: italic
 
-	.wk-xs-children-font-style-normal
+	.wk-xs-children-text-normal,
+	[data-layout-phone~="children-text-normal"]
 		> *
 			font-style: normal
+
+	.wk-xs-children-text-oblique,
+	[data-layout-phone~="children-text-oblique"]
+		> *
+			font-style: oblique
 
 /*========== Font size ==========*/
 
 @for $i from 1 through 100
 	@if $i % 2 == 0
-		.wk-font-size-#{$i}
-			font-size: #{$i}
+		.wk-text-size-#{$i},
+		[data-layout~="text-size-#{$i}"]
+			font-size: #{$i}px
 
-		.wk-children-font-size-#{$i}
+		.wk-children-text-size-#{$i}
 			> *
-				font-size: #{$i}
+				font-size: #{$i}px
 
 @media ( min-width: $desktop )
 	@for $i from 1 through 100
 		@if $i % 2 == 0
-			.wk-d-font-size-#{$i}
-				font-size: #{$i}
+			.wk-d-text-size-#{$i},
+			[data-layout-desktop~="text-size-#{$i}"]
+				font-size: #{$i}px
 
-			.wk-d-children-font-size-#{$i}
+			.wk-d-children-text-size-#{$i},
+			[data-layout-desktop~="children-text-size-#{$i}"]
 				> *
-					font-size: #{$i}
+					font-size: #{$i}px
 
 @media ( max-width: $mobile )
 	@for $i from 1 through 100
 		@if $i % 2 == 0
-			.wk-m-font-size-#{$i}
-				font-size: #{$i}
+			.wk-m-text-size-#{$i},
+			[data-layout-mobile~="text-size-#{$i}"]
+				font-size: #{$i}px
 
-			.wk-m-children-font-size-#{$i}
+			.wk-m-children-text-size-#{$i},
+			[data-layout-mobile~="children-text-size-#{$i}"]
 				> *
-					font-size: #{$i}
+					font-size: #{$i}px
+
+@media ( min-width: $tablet ) and ( max-width: $mobile )
+	@for $i from 1 through 100
+		@if $i % 2 == 0
+			.wk-t-text-size-#{$i},
+			[data-layout-tablet~="text-size-#{$i}"]
+				font-size: #{$i}px
+
+			.wk-t-children-text-size-#{$i},
+			[data-layout-tablet~="children-text-size-#{$i}"]
+				> *
+					font-size: #{$i}px
 
 @media ( max-width: $mobile-xs )
 	@for $i from 1 through 100
 		@if $i % 2 == 0
-			.wk-xs-font-size-#{$i}
-				font-size: #{$i}
+			.wk-xs-text-size-#{$i},
+			[data-layout-phone~="text-size-#{$i}"]
+				font-size: #{$i}px
 
-			.wk-xs-children-font-size-#{$i}
+			.wk-xs-children-text-size-#{$i},
+			[data-layout-phone~="children-text-size-#{$i}"]
 				> *
-					font-size: #{$i}
+					font-size: #{$i}px

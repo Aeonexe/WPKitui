@@ -1,0 +1,27 @@
+section#wrapper-system.wk-section.page
+	.wk-section-wrap
+		h1 Systema de contenedores
+		p 
+			| Cada porción del layout podrá incluirse en un contenedor con la clase <mark>wk-section</mark> esta por si sola no aplica ninguna propiedad al contenido
+			| pero prepara el mismo para ser contenido en una envolvente con ancho limitado especificanto un contenedor hijo <mark>wk-section-wrap</mark>. Será necesario
+			| definir antes el ancho de este contenedor mediante la clase en body <mark>wk-wrap-($width)</mark> donde $width = 700px a 1900px siendo posible especificar
+			| unicamente medidas pares p.ej. 702, 704, 706... 1598, etc.
+
+		pre.prettyprint
+			code
+				|	&lt;div class=&quot;wk-section&quot;&gt;
+				|		&lt;div class=&quot;wk-section-wrap&quot;&gt;
+				|			&lt;!--Content--&gt;
+				|		&lt;/div&gt;
+				|	&lt;/div&gt;
+				|
+				|
+				|	&lt;!-- wk-wrapp-1100 podr&aacute; contener valores 
+				|	de 700 a 1600 con medidas pares &uacute;nicamente.--&gt;
+				|	&lt;body class=&quot;wk-wrap-1100&quot;&gt;
+				|		&lt;div class=&quot;wk-section&quot;&gt;
+				|			&lt;div class=&quot;wk-section-wrap&quot;&gt;
+				|				&lt;!--Content--&gt;
+				|			&lt;/div&gt;
+				|		&lt;/div&gt;	
+				|	&lt;/body&gt;
